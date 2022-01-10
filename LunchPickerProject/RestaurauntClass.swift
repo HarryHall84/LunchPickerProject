@@ -6,3 +6,16 @@
 //
 
 import Foundation
+import UIKit
+
+class Resturant {
+    var adresss = ""
+    var phoneN = ""
+    var restName = ""
+    var distance  = 0
+    var resturantLogo : UIImage
+    
+    public init(var ad, var pn ,var rst = "")
+    {
+    }
+}
