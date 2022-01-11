@@ -33,10 +33,10 @@
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="67.633928571428569"/>
         </scene>
-        <!--View Controller-->
+        <!--Pick Restauraunts-->
         <scene sceneID="COy-l2-4wP">
             <objects>
-                <viewController id="1N8-NC-4bZ" sceneMemberID="viewController">
+                <viewController id="1N8-NC-4bZ" customClass="PickRestauraunts" customModule="LunchPickerProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bTK-LH-5qX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -71,6 +71,9 @@
                             <constraint firstItem="nvW-z6-fa8" firstAttribute="leading" secondItem="NBP-yF-dkq" secondAttribute="leading" id="rHp-y2-k00"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionViewOutlet" destination="nvW-z6-fa8" id="I9Y-yh-bT8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iHm-Sn-MBe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
