@@ -8,12 +8,15 @@
 import Foundation
 import UIKit
 class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+    var resturantArray : [Resturant] = []
     
 
     @IBOutlet weak var collectionViewOutlet: UICollectionView!
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+                super.viewDidLoad()
+        var a = Resturant(adresss: "", phoneN: "", restName: "", distance: 0, resturantLogo: dsjd)
+        resturantArray.append(a)
         collectionViewOutlet.delegate = self
         collectionViewOutlet.dataSource = self
         // Do any additional setup after loading the view.
