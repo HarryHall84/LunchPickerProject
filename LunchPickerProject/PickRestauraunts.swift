@@ -15,8 +15,8 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
     
     override func viewDidLoad() {
                 super.viewDidLoad()
-        var a = Resturant(adresss: "", phoneN: "", restName: "", distance: 0, resturantLogo:)
-        resturantArray.append(a)
+        var culvers = Resturant(adresss: "", phoneN: "", restName: "culvers", distance: 10, resturantLogo: "culvers.png")
+        resturantArray.append(culvers)
         collectionViewOutlet.delegate = self
         collectionViewOutlet.dataSource = self
         // Do any additional setup after loading the view.
