@@ -10,7 +10,7 @@ import UIKit
 class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     var resturantArray : [Resturant] = []
     
-
+    
     @IBOutlet weak var collectionViewOutlet: UICollectionView!
     
     override func viewDidLoad() {
@@ -22,6 +22,7 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
         collectionViewOutlet.dataSource = self
         // Do any additional setup after loading the view.
     }
+    var testImage = UIImage(named: "")
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return resturantArray.count
@@ -30,7 +31,7 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath)
         // Put images here
-        
+        cell.imageView?.image = testImage
         return cell 
         
     }
