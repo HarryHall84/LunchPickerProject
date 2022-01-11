@@ -10,11 +10,12 @@ import UIKit
 class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     var resturantArray : [Resturant] = []
     
+
     @IBOutlet weak var collectionViewOutlet: UICollectionView!
     
     override func viewDidLoad() {
                 super.viewDidLoad()
-        var a = Resturant(adresss: "", phoneN: "", restName: "", distance: 0, resturantLogo: dsjd)
+        var a = Resturant(adresss: "", phoneN: "", restName: "", distance: 0, resturantLogo:)
         resturantArray.append(a)
         collectionViewOutlet.delegate = self
         collectionViewOutlet.dataSource = self
@@ -22,11 +23,15 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        <#code#>
+        return resturantArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath)
+        // Put images here
+        
+        return cell 
+        
     }
     
 }
