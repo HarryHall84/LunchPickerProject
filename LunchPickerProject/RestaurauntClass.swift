@@ -9,13 +9,18 @@ import Foundation
 import UIKit
 
 class Resturant {
-    var adresss = ""
-    var phoneN = ""
-    var restName = ""
-    var distance  = 0
+    var adresss : String
+    var phoneN : String
+    var restName : String
+    var distance : Int
     var resturantLogo : UIImage
     
-    public init(var ad, var pn ,var rst = "")
+    public init(adresss : String, phoneN : String, restName : String, distance : Int, resturantLogo : UIImage)
     {
+        self.adresss = adresss
+        self.phoneN = phoneN
+        self.restName = restName
+        self.distance = distance
+        self.resturantLogo = resturantLogo
     }
 }
