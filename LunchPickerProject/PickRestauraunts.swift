@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
-    
+
     @IBOutlet weak var collectionViewOutlet: UICollectionView!
     
     override func viewDidLoad() {
@@ -24,7 +24,11 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath)
+        // Put images here
+        
+        return cell 
+        
     }
     
 }
