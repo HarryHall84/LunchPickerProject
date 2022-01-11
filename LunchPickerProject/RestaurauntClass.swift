@@ -15,12 +15,12 @@ class Resturant {
     var distance : Int
     var resturantLogo : UIImage
     
-    public init(adresss : String, phoneN : String, restName : String, distance : Int, resturantLogo : UIImage)
+    public init(adresss : String, phoneN : String, restName : String, distance : Int, resturantLogo : String)
     {
         self.adresss = adresss
         self.phoneN = phoneN
         self.restName = restName
         self.distance = distance
-        self.resturantLogo = resturantLogo
+        self.resturantLogo = UIImage(named: resturantLogo)!
     }
 }
