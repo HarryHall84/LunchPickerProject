@@ -26,16 +26,19 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
         collectionViewOutlet.dataSource = self
         // Do any additional setup after loading the view.
     }
-    var testImage = UIImage(named: "culvers.png")
+
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return resturantArray.count
+        // return resturantArray.count
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath)
         // Put images here
-        cell.imageView.image = testImage
+        let image: UIImage = UIImage(named:"culvers.png")!
+        firstImageView.image = image
+        cell.contentView.addSubview(firstImageView)
         return cell 
         
     }
