@@ -89,6 +89,7 @@
                     <navigationItem key="navigationItem" id="8t3-Ue-TN1"/>
                     <connections>
                         <outlet property="collectionViewOutlet" destination="nvW-z6-fa8" id="I9Y-yh-bT8"/>
+                        <outlet property="firstImageView" destination="tiM-Wy-zCa" id="5eB-Er-tz7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iHm-Sn-MBe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

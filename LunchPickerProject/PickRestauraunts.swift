@@ -10,6 +10,7 @@ import UIKit
 class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     var resturantArray : [Resturant] = []
     
+    @IBOutlet weak var firstImageView: UIImageView!
     
     @IBOutlet weak var collectionViewOutlet: UICollectionView!
     
