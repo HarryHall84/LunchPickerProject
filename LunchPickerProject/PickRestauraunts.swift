@@ -10,8 +10,6 @@ import UIKit
 class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     var resturantArray : [Resturant] = []
     
-    @IBOutlet weak var firstImageView: UIImageView!
-    
     @IBOutlet weak var collectionViewOutlet: UICollectionView!
     
     override func viewDidLoad() {
@@ -35,9 +33,10 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath)
         // Put images here
+        // Test (making sure images go on cell)
         let image: UIImage = UIImage(named:"culvers.png")!
-        firstImageView.image = image
-        cell.contentView.addSubview(firstImageView)
+        // firstImageView.image = image
+        //cell.addSubview(firstImageView)
         return cell 
         
     }
