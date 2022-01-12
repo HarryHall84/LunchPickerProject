@@ -15,7 +15,10 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
     
     override func viewDidLoad() {
                 super.viewDidLoad()
-        var burgerKing = Resturant(adresss: "", phoneN: "", restName: "Burger King", distance: 22, resturantLogo: <#T##String#>)
+        var tacoBell = Resturant(adresss: <#T##String#>, phoneN: <#T##String#>, restName: <#T##String#>, distance: <#T##Int#>, resturantLogo: <#T##String#>)
+        var mcdonalds = Resturant(adresss: <#T##String#>, phoneN: <#T##String#>, restName: <#T##String#>, distance: <#T##Int#>, resturantLogo: <#T##String#>)
+        var freddys = Resturant(adresss: <#T##String#>, phoneN: <#T##String#>, restName: <#T##String#>, distance: <#T##Int#>, resturantLogo: <#T##String#>)
+        var burgerKing = Resturant(adresss: "", phoneN: "", restName: "Burger King", distance: 22, resturantLogo: burgerKing.png)
         var culvers = Resturant(adresss: "", phoneN: "", restName: "Culvers", distance: 10, resturantLogo: "culvers.png")
         resturantArray.append(culvers)
         collectionViewOutlet.delegate = self
