@@ -16,11 +16,10 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
     
     override func viewDidLoad() {
                 super.viewDidLoad()
-        var tacoBell = Resturant(adresss: <#T##String#>, phoneN: <#T##String#>, restName: <#T##String#>, distance: <#T##Int#>, resturantLogo: <#T##String#>)
-        var mcdonalds = Resturant(adresss: <#T##String#>, phoneN: <#T##String#>, restName: <#T##String#>, distance: <#T##Int#>, resturantLogo: <#T##String#>)
-        var freddys = Resturant(adresss: <#T##String#>, phoneN: <#T##String#>, restName: <#T##String#>, distance: <#T##Int#>, resturantLogo: <#T##String#>)
-        var burgerKing = Resturant(adresss: "", phoneN: "", restName: "Burger King", distance: 22, resturantLogo: burgerKing.png)
-        var culvers = Resturant(adresss: "", phoneN: "", restName: "Culvers", distance: 10, resturantLogo: "culvers.png")
+        var tacoBell = Resturant(adresss: "420 W Virginia St", phoneN: "815-459-3377", restName: "Taco Bell", distance: 10, resturantLogo: "tacoBell")
+        var mcdonalds = Resturant(adresss: "551 Crystal Point Rd", phoneN: "815-455-6630", restName: "Mcdonalds", distance: 10, resturantLogo: "clowning")
+        var burgerKing = Resturant(adresss: "250 W Virginia St, Crystal Lake, IL 60014", phoneN: "815-459-2976", restName: "Burger King", distance: 22, resturantLogo: "burgerKing")
+        var culvers = Resturant(adresss: "400 Pingree Rd Crystal Lake, IL 60014", phoneN: "815-356-9090", restName: "Culvers", distance: 10, resturantLogo: "culvers.png")
         resturantArray.append(culvers)
         collectionViewOutlet.delegate = self
         collectionViewOutlet.dataSource = self
