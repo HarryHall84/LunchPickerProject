@@ -29,14 +29,14 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // return resturantArray.count
-        return 1
+        return resturantArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! CustomnCellClass
         // Put images here
         // Test (making sure images go on cell)
-        cell.imageView.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
+        
         cell.imageView.image =  UIImage(named:"culvers.png")!
         // firstImageView.image = image
         //cell.addSubview(firstImageView)
