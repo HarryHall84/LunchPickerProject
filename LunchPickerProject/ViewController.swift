@@ -15,9 +15,9 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         //mateo is here
     }
-    override func performSegue(withIdentifier identifier: String, sender: Any?) {
-        <#code#>
+    @IBAction func toCollectionViewBut(_ sender: Any) {
+        performSegue(withIdentifier: "segueToCollectionView", sender: nil)
     }
-
+    
 }
 
