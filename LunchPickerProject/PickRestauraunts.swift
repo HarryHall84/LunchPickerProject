@@ -18,6 +18,8 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
         var mcdonalds = Resturant(adresss: "551 Crystal Point Rd", phoneN: "815-455-6630", restName: "Mcdonalds", distance: 10, resturantLogo: "clowning")
         var burgerKing = Resturant(adresss: "250 W Virginia St, Crystal Lake, IL 60014", phoneN: "815-459-2976", restName: "Burger King", distance: 22, resturantLogo: "burgerKing")
         var culvers = Resturant(adresss: "400 Pingree Rd Crystal Lake, IL 60014", phoneN: "815-356-9090", restName: "Culvers", distance: 10, resturantLogo: "culvers.png")
+        var popeys = Resturant(adresss: <#T##String#>, phoneN: <#T##String#>, restName: <#T##String#>, distance: <#T##Int#>, resturantLogo: <#T##String#>)
+        var chickFille = Resturant(adresss: <#T##String#>, phoneN: <#T##String#>, restName: <#T##String#>, distance: <#T##Int#>, resturantLogo: <#T##String#>)
         resturantArray.append(culvers)
         collectionViewOutlet.delegate = self
         collectionViewOutlet.dataSource = self
