@@ -32,6 +32,7 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
         resturantArray.append(subway)
         resturantArray.append(jimmyjohns)
         resturantArray.append(tommys)
+        
         collectionViewOutlet.delegate = self
         collectionViewOutlet.dataSource = self
         // Do any additional setup after loading the view.
