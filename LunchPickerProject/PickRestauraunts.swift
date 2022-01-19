@@ -48,8 +48,12 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! CustomnCellClass
         // Put images here
         // Test (making sure images go on cell)
-        
-        cell.imageView.image =  UIImage(named:"culvers.png")!
+        for i in resturantArray {
+            // cell.imageView.image =  UIImage(named:"culvers.png")!
+            print(resturantArray.count)
+            var string = "\(i.resturantLogo)"
+            cell.imageView.image = UIImage(named: string)
+        }
         // firstImageView.image = image
         //cell.addSubview(firstImageView)
         return cell 
