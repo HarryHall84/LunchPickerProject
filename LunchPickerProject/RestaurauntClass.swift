@@ -23,4 +23,5 @@ class Resturant {
         self.distance = distance
         self.resturantLogo = UIImage(named: resturantLogo)!
     }
+    
 }
