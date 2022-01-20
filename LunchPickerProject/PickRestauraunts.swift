@@ -50,7 +50,7 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
         // Test (making sure images go on cell)
             // cell.imageView.image =  UIImage(named:"culvers.png")!
             print(resturantArray.count)
-        cell.imageView.image = UIImage(named: "culvers.png")
+        cell.imageView.image = resturantArray[indexPath.row].resturantLogo
         // firstImageView.image = image
         //cell.addSubview(firstImageView)
         return cell 
