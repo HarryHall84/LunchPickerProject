@@ -35,8 +35,15 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
         
         collectionViewOutlet.delegate = self
         collectionViewOutlet.dataSource = self
+        
+        
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func tapImageAction(_ sender: UITapGestureRecognizer) {
+        print("Tapped")
+    }
+    
 
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
