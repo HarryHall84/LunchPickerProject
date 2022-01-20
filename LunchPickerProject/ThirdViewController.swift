@@ -15,8 +15,7 @@ class ThirdViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    @IBAction func spinAction(_ sender: UITapGestureRecognizer) {
-    }
+    
     
 
     /*

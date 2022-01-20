@@ -108,7 +108,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Continue"/>
                                 <connections>
-                                    <segue destination="0ZK-5g-gyh" kind="show" id="4Dk-Qx-lJh"/>
+                                    <segue destination="0ZK-5g-gyh" kind="show" identifier="screen2ToScreen3" id="4Dk-Qx-lJh"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -151,7 +151,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="hfG-u6-Dzz" appends="YES" id="7fv-bd-MrG"/>
+                                    <outletCollection property="gestureRecognizers" destination="VhF-nf-f9o" appends="YES" id="2Cf-RF-Nzg"/>
                                 </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7AG-TD-jDq">
@@ -182,11 +182,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8EC-8F-6yq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="hfG-u6-Dzz">
-                    <connections>
-                        <action selector="spinAction:" destination="0ZK-5g-gyh" id="28L-jN-9s0"/>
-                    </connections>
-                </tapGestureRecognizer>
+                <tapGestureRecognizer id="VhF-nf-f9o"/>
             </objects>
             <point key="canvasLocation" x="2508.6956521739135" y="85.714285714285708"/>
         </scene>

@@ -56,5 +56,7 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
         return cell 
         
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //variables we want to send over
+    }
 }
