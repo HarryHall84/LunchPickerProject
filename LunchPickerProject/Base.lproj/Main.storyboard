@@ -83,9 +83,6 @@
                                                         <constraint firstAttribute="height" constant="200" id="kqg-ql-Eww"/>
                                                         <constraint firstAttribute="width" constant="200" id="q39-ol-5FX"/>
                                                     </constraints>
-                                                    <connections>
-                                                        <outletCollection property="gestureRecognizers" destination="zhA-AN-cRs" appends="YES" id="poF-Bz-8qL"/>
-                                                    </connections>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -95,6 +92,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="hFy-Gl-d2w" secondAttribute="bottom" id="yFC-42-nfy"/>
                                             </constraints>
                                         </collectionViewCellContentView>
+                                        <gestureRecognizers/>
                                         <size key="customSize" width="200" height="200"/>
                                         <connections>
                                             <outlet property="imageView" destination="hFy-Gl-d2w" id="8bq-rr-sFC"/>
@@ -127,7 +125,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iHm-Sn-MBe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="zhA-AN-cRs" userLabel="Image tapper"/>
             </objects>
             <point key="canvasLocation" x="1727.536231884058" y="81.696428571428569"/>
         </scene>
