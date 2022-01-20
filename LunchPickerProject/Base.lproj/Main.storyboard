@@ -60,7 +60,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nvW-z6-fa8">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="704"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NEC-QI-vt2">
                                     <size key="itemSize" width="128" height="128"/>
@@ -98,14 +98,23 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NUa-4s-JCg">
+                                <rect key="frame" x="140" y="831" width="135" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Continue"/>
+                                <connections>
+                                    <segue destination="0ZK-5g-gyh" kind="show" id="4Dk-Qx-lJh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="NBP-yF-dkq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="NBP-yF-dkq" firstAttribute="trailing" secondItem="nvW-z6-fa8" secondAttribute="trailing" id="Leh-7Y-j3K"/>
-                            <constraint firstItem="nvW-z6-fa8" firstAttribute="top" secondItem="NBP-yF-dkq" secondAttribute="top" id="LrA-lG-Nmb"/>
-                            <constraint firstItem="NBP-yF-dkq" firstAttribute="bottom" secondItem="nvW-z6-fa8" secondAttribute="bottom" id="rBs-iS-vvb"/>
-                            <constraint firstItem="nvW-z6-fa8" firstAttribute="leading" secondItem="NBP-yF-dkq" secondAttribute="leading" id="rHp-y2-k00"/>
+                            <constraint firstItem="nvW-z6-fa8" firstAttribute="top" secondItem="NBP-yF-dkq" secondAttribute="top" id="1fY-Ie-oHw"/>
+                            <constraint firstItem="nvW-z6-fa8" firstAttribute="trailing" secondItem="NBP-yF-dkq" secondAttribute="trailing" id="7nb-4m-XBr"/>
+                            <constraint firstItem="NBP-yF-dkq" firstAttribute="bottom" secondItem="nvW-z6-fa8" secondAttribute="bottom" constant="70" id="FaU-vm-Pve"/>
+                            <constraint firstItem="nvW-z6-fa8" firstAttribute="leading" secondItem="NBP-yF-dkq" secondAttribute="leading" id="URE-3a-XhC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8t3-Ue-TN1"/>
@@ -162,6 +171,7 @@
                         <viewLayoutGuide key="safeArea" id="hzv-Mn-xqZ"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <navigationItem key="navigationItem" id="3Ty-x8-rnC"/>
                     <connections>
                         <outlet property="resturantNamy" destination="7AG-TD-jDq" id="Jns-Hp-pfY"/>
                     </connections>
@@ -180,7 +190,7 @@
             <objects>
                 <viewController id="lN4-6J-HB0" customClass="FourthViewController" customModule="LunchPickerProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vqh-pv-iAR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Resturant" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wVy-Ry-7Ql">
