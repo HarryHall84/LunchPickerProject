@@ -40,9 +40,6 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func tapImageAction(_ sender: UITapGestureRecognizer) {
-        print("Tapped")
-    }
     
 
     
