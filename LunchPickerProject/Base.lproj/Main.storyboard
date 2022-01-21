@@ -179,7 +179,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8EC-8F-6yq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="VhF-nf-f9o"/>
+                <tapGestureRecognizer id="VhF-nf-f9o">
+                    <connections>
+                        <action selector="spinWheel:" destination="0ZK-5g-gyh" id="8d3-62-Z9j"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2508.6956521739135" y="85.714285714285708"/>
         </scene>
