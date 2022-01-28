@@ -57,6 +57,9 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
         return cell 
         
     }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("yes queen")
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //variables we want to send over
     }
