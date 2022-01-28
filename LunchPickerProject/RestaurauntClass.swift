@@ -14,14 +14,16 @@ class Resturant {
     var restName : String
     var distance : Int
     var resturantLogo : UIImage
+    var checkSwitch : Bool
     
-    public init(adresss : String, phoneN : String, restName : String, distance : Int, resturantLogo : String)
+    public init(adresss : String, phoneN : String, restName : String, distance : Int, resturantLogo : String, checkSwitch: Bool)
     {
         self.adresss = adresss
         self.phoneN = phoneN
         self.restName = restName
         self.distance = distance
         self.resturantLogo = UIImage(named: resturantLogo)!
+        self.checkSwitch = false 
     }
     
 }

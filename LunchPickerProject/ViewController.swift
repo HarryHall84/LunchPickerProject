@@ -9,9 +9,11 @@ import UIKit
 // Title screen 
 class ViewController: UIViewController {
     @IBOutlet weak var titleButtonSegue: UIButton!
+    
     // Initial Program
     override func viewDidLoad() {
         super.viewDidLoad()
+        titleButtonSegue.titleLabel?.font = UIFont(name: "Arial", size: 30)
         // Do any additional setup after loading the view.
         //mateo is here
     }
