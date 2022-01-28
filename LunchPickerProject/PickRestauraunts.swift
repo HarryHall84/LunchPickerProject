@@ -53,9 +53,6 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
        // Put images here
             print(resturantArray.count)
         cell.imageView.image = resturantArray[indexPath.row].resturantLogo
-        if cell.cellSwitch != nil{
-            print("TRUE")
-        }
         return cell 
         
     }

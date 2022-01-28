@@ -8,7 +8,5 @@
 import Foundation
 import UIKit
 class CustomnCellClass:UICollectionViewCell{
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var cellSwitch: UISwitch!
-    
+    @IBOutlet weak var imageView: UIImageView!    
 }
