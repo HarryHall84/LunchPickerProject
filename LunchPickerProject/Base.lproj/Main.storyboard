@@ -103,6 +103,7 @@
                                         <gestureRecognizers/>
                                         <size key="customSize" width="200" height="200"/>
                                         <connections>
+                                            <outlet property="cellSwitch" destination="ycN-VN-IZx" id="icJ-cn-qEY"/>
                                             <outlet property="imageView" destination="hFy-Gl-d2w" id="8bq-rr-sFC"/>
                                         </connections>
                                     </collectionViewCell>
@@ -123,6 +124,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="8t3-Ue-TN1"/>
                     <connections>
+                        <outlet property="cellSwitch" destination="nvW-z6-fa8" id="tnf-t4-KEq"/>
                         <outlet property="collectionViewOutlet" destination="nvW-z6-fa8" id="I9Y-yh-bT8"/>
                     </connections>
                 </viewController>

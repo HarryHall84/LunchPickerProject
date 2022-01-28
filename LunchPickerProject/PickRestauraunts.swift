@@ -50,13 +50,12 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! CustomnCellClass
-        // Put images here
-        // Test (making sure images go on cell)
-            // cell.imageView.image =  UIImage(named:"culvers.png")!
+       // Put images here
             print(resturantArray.count)
         cell.imageView.image = resturantArray[indexPath.row].resturantLogo
-        // firstImageView.image = image
-        //cell.addSubview(firstImageView)
+        if cell.cellSwitch != nil{
+            print("TRUE")
+        }
         return cell 
         
     }
