@@ -57,7 +57,12 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
         
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! CustomnCellClass
         print("yes queen")
+       // cell.layer.borderWidth = 2.0
+        cell.layer.borderColor = UIColor.gray.cgColor
+        collectionView.reloadData()
+       
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //variables we want to send over
