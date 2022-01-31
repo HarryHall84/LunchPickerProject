@@ -52,8 +52,7 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! CustomnCellClass
        // Put images here
             print(resturantArray.count)
-        cell.imageView.image = resturantArray[indexPath.row].resturantLogo
-
+        cell.imageView.image = resturantArray[indexPath.row].resturantLogo    
         return cell 
         
     }
