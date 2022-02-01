@@ -78,19 +78,19 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hFy-Gl-d2w">
-                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                                    <rect key="frame" x="30" y="30" width="140" height="140"/>
                                                     <gestureRecognizers/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="150" id="fAd-Ek-iH5"/>
-                                                        <constraint firstAttribute="width" constant="150" id="fcl-WG-VHF"/>
+                                                        <constraint firstAttribute="width" constant="180" id="437-II-NZm"/>
+                                                        <constraint firstAttribute="height" constant="180" id="U2C-sv-CeK"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="hFy-Gl-d2w" firstAttribute="top" secondItem="Uu1-lR-s3Z" secondAttribute="top" id="Jvd-Jr-bVp"/>
-                                                <constraint firstAttribute="trailing" secondItem="hFy-Gl-d2w" secondAttribute="trailing" id="qpf-7C-87E"/>
-                                                <constraint firstAttribute="bottom" secondItem="hFy-Gl-d2w" secondAttribute="bottom" id="sCr-cQ-oLp"/>
-                                                <constraint firstItem="hFy-Gl-d2w" firstAttribute="leading" secondItem="Uu1-lR-s3Z" secondAttribute="leading" id="vii-zf-cI3"/>
+                                                <constraint firstItem="hFy-Gl-d2w" firstAttribute="top" secondItem="Uu1-lR-s3Z" secondAttribute="top" constant="30" id="5ET-V4-E7K"/>
+                                                <constraint firstItem="hFy-Gl-d2w" firstAttribute="leading" secondItem="Uu1-lR-s3Z" secondAttribute="leading" constant="30" id="Cgw-Au-3MM"/>
+                                                <constraint firstAttribute="bottom" secondItem="hFy-Gl-d2w" secondAttribute="bottom" constant="30" id="VYZ-ZV-xAZ"/>
+                                                <constraint firstAttribute="trailing" secondItem="hFy-Gl-d2w" secondAttribute="trailing" constant="30" id="wWV-C3-d9l"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <gestureRecognizers/>

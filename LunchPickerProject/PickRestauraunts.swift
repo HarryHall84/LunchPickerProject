@@ -9,9 +9,9 @@ import Foundation
 import UIKit
 class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     var resturantArray : [Resturant] = []
+    var resturantsSelected : [Resturant] = []
     
     @IBOutlet weak var collectionViewOutlet: UICollectionView!
-    
     override func viewDidLoad() {
                 super.viewDidLoad()
         var tacoBell = Resturant(adresss: "420 W Virginia St", phoneN: "815-459-3377", restName: "Taco Bell", distance: 10, resturantLogo: "tacoBell", checkSwitch: false)
@@ -51,18 +51,21 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! CustomnCellClass
        // Put images here
-            print(resturantArray.count)
-        cell.imageView.image = resturantArray[indexPath.row].resturantLogo    
+           //print(resturantArray.count)
+        cell.imageView.image = resturantArray[indexPath.row].resturantLogo
         return cell 
         
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! CustomnCellClass
+        resturantsSelected.append(resturantArray[indexPath.row])
+        //let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! CustomnCellClass
+        let cell = collectionView.cellForItem(at: indexPath)
         print("yes queen")
-       // cell.layer.borderWidth = 2.0
-        cell.layer.borderColor = UIColor.gray.cgColor
-        collectionView.reloadData()
-       
+        cell?.layer.borderWidth = 2.0
+        cell?.layer.borderColor = UIColor.green.cgColor
+        //cell.imageView.tintColor = .systemRed
+        //cell.layer.backgroundColor = UIColor.green.cgColor
+       // collectionView.reloadData()
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //variables we want to send over
