@@ -63,9 +63,6 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
         print("yes queen")
         cell?.layer.borderWidth = 2.0
         cell?.layer.borderColor = UIColor.green.cgColor
-        //cell.imageView.tintColor = .systemRed
-        //cell.layer.backgroundColor = UIColor.green.cgColor
-       // collectionView.reloadData()
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //variables we want to send over
