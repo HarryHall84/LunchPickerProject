@@ -57,16 +57,27 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
         
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        var selected = 1
         resturantsSelected.append(resturantArray[indexPath.row])
-        //let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! CustomnCellClass
         let cell = collectionView.cellForItem(at: indexPath)
+        //let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! CustomnCellClass
+        if(resturantArray[indexPath.row].checkSwitch == false){
         print("yes queen")
         cell?.layer.borderWidth = 2.0
         cell?.layer.borderColor = UIColor.green.cgColor
         //cell.imageView.tintColor = .systemRed
         //cell.layer.backgroundColor = UIColor.green.cgColor
        // collectionView.reloadData()
+        resturantArray[indexPath.row].checkSwitch = true
+        }
+        else if (resturantArray[indexPath.row].checkSwitch == true){
+            cell?.layer.borderWidth = 0
+            resturantsSelected.remove(at: indexPath.row)
+            print("no queeeeeen")
+            resturantArray[indexPath.row].checkSwitch = false
+        }
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //variables we want to send over
     }
