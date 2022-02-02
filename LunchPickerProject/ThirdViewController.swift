@@ -8,6 +8,7 @@
 import UIKit
 
 class ThirdViewController: UIViewController {
+    var selectedResturants2 : [Resturant] = []
     @IBOutlet weak var resturantNamy: UILabel!
     
     override func viewDidLoad() {
@@ -16,6 +17,8 @@ class ThirdViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func spinWheel(_ sender: UITapGestureRecognizer) {
+        print(selectedResturants2[0])
+        print("yes sir")
     }
     
 

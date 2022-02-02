@@ -80,5 +80,8 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //variables we want to send over
+        if let nvc = segue.destination as? ThirdViewController{
+            nvc.selectedResturants2 = resturantsSelected
+        }
     }
 }
