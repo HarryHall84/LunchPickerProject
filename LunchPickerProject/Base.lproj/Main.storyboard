@@ -107,6 +107,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Continue"/>
                                 <connections>
+                                    <action selector="continueSelected:" destination="1N8-NC-4bZ" eventType="touchUpInside" id="2P5-V8-Afv"/>
                                     <segue destination="0ZK-5g-gyh" kind="show" identifier="screen2ToScreen3" id="4Dk-Qx-lJh"/>
                                 </connections>
                             </button>
@@ -142,9 +143,6 @@
                                 <rect key="frame" x="-47" y="310" width="509" height="344"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="VhF-nf-f9o" appends="YES" id="2Cf-RF-Nzg"/>
-                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7AG-TD-jDq">
                                 <rect key="frame" x="88" y="229" width="238" height="54"/>
@@ -174,11 +172,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8EC-8F-6yq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="VhF-nf-f9o">
-                    <connections>
-                        <action selector="spinWheel:" destination="0ZK-5g-gyh" id="8d3-62-Z9j"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2508.6956521739135" y="85.714285714285708"/>
         </scene>

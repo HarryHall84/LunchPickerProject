@@ -11,6 +11,7 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
     var resturantArray : [Resturant] = []
     var resturantsSelected : [Resturant] = []
     var selectedItems = 0
+  
     
     @IBOutlet weak var collectionViewOutlet: UICollectionView!
     override func viewDidLoad() {
@@ -58,31 +59,38 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
         
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.delaysContentTouches = false
         resturantsSelected.append(resturantArray[indexPath.row])
         let cell = collectionView.cellForItem(at: indexPath)
         //let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! CustomnCellClass
-        if(resturantArray[indexPath.row].checkSwitch == false){
-        print("yes queen")
-        cell?.layer.borderWidth = 2.0
-        cell?.layer.borderColor = UIColor.green.cgColor
+       // if(resturantArray[indexPath.row].checkSwitch == false){
+       // print("yes queen")
+      //  cell?.layer.borderWidth = 2.0
+       // cell?.layer.borderColor = UIColor.green.cgColor
         //cell.imageView.tintColor = .systemRed
         //cell.layer.backgroundColor = UIColor.green.cgColor
        // collectionView.reloadData()
-        resturantArray[indexPath.row].checkSwitch = true
+      //  resturantArray[indexPath.row].checkSwitch = true
             selectedItems += 1
-        }
-        else if (resturantArray[indexPath.row].checkSwitch == true){
-            cell?.layer.borderWidth = 0
-            resturantsSelected.remove(at: indexPath.row)
-            print("no queeeeeen")
-            resturantArray[indexPath.row].checkSwitch = false
-            selectedItems -= 1
-        }
+    //    }
+     //   else if (resturantArray[indexPath.row].checkSwitch == true){
+        //    cell?.layer.borderWidth = 0
+       //     resturantsSelected.remove(at: indexPath.row)
+       //     print("no queeeeeen")
+       //     resturantArray[indexPath.row].checkSwitch = false
+        //    selectedItems -= 1
+     //   }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //variables we want to send over
         print(resturantsSelected.count)
+        if let nvc = segue.destination as? ThirdViewController
+        {
+            nvc.selectedResturants2 = resturantsSelected
+        }
+    }
+    @IBAction func continueSelected(_ sender: UIButton) {
         if selectedItems < 2 {
             let alert = UIAlertController(title: "Error", message: "Select at least 2 restaurants", preferredStyle: .actionSheet)
             let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
@@ -90,6 +98,5 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
             present(alert, animated: true, completion: nil)
             
         }
-        
     }
 }
