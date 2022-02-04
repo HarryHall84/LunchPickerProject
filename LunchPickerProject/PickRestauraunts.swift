@@ -11,7 +11,7 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
     var resturantArray : [Resturant] = []
     var resturantsSelected : [Resturant] = []
     var selectedItems = 0
-  
+    var selectedIndexPath : IndexPath?
     
     @IBOutlet weak var collectionViewOutlet: UICollectionView!
     override func viewDidLoad() {
@@ -55,31 +55,31 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
        // Put images here
            //print(resturantArray.count)
         cell.imageView.image = resturantArray[indexPath.row].resturantLogo
+        if resturantArray[indexPath.row].checkSwitch == true {
+            cell.layer.backgroundColor = UIColor.green.cgColor
+        } else if resturantArray[indexPath.row].checkSwitch == false {
+            cell.layer.backgroundColor = UIColor.white.cgColor
+        }
         return cell 
         
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        collectionView.delaysContentTouches = false
-        resturantsSelected.append(resturantArray[indexPath.row])
         let cell = collectionView.cellForItem(at: indexPath)
-        //let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! CustomnCellClass
-       // if(resturantArray[indexPath.row].checkSwitch == false){
-       // print("yes queen")
-      //  cell?.layer.borderWidth = 2.0
-       // cell?.layer.borderColor = UIColor.green.cgColor
-        //cell.imageView.tintColor = .systemRed
-        //cell.layer.backgroundColor = UIColor.green.cgColor
-       // collectionView.reloadData()
-      //  resturantArray[indexPath.row].checkSwitch = true
-            selectedItems += 1
-    //    }
-     //   else if (resturantArray[indexPath.row].checkSwitch == true){
-        //    cell?.layer.borderWidth = 0
-       //     resturantsSelected.remove(at: indexPath.row)
-       //     print("no queeeeeen")
-       //     resturantArray[indexPath.row].checkSwitch = false
-        //    selectedItems -= 1
-     //   }
+        // collectionView.delaysContentTouches = false
+        resturantsSelected.append(resturantArray[indexPath.row])
+        resturantArray[indexPath.row].checkSwitch = true
+       // cell!.layer.backgroundColor = UIColor.green.cgColor
+       // self.selectedIndexPath = indexPath
+        collectionViewOutlet.reloadData()
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        resturantArray[indexPath.row].checkSwitch = false
+        //cell!.layer.backgroundColor = UIColor.white.cgColor
+        //self.selectedIndexPath = nil
+        collectionViewOutlet.reloadData()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
