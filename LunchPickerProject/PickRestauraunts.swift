@@ -58,6 +58,7 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
         if resturantArray[indexPath.row].checkSwitch == true {
             cell.layer.backgroundColor = UIColor.green.cgColor
         } else if resturantArray[indexPath.row].checkSwitch == false {
+            print("Deselecting")
             cell.layer.backgroundColor = UIColor.white.cgColor
         }
         return cell 
@@ -68,6 +69,7 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
         // collectionView.delaysContentTouches = false
         resturantsSelected.append(resturantArray[indexPath.row])
         resturantArray[indexPath.row].checkSwitch = true
+        selectedItems += 1
        // cell!.layer.backgroundColor = UIColor.green.cgColor
        // self.selectedIndexPath = indexPath
         collectionViewOutlet.reloadData()
@@ -76,7 +78,10 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)
+        resturantsSelected.remove(at: indexPath.row)
         resturantArray[indexPath.row].checkSwitch = false
+        selectedItems -= 1
+        print("Deselected")
         //cell!.layer.backgroundColor = UIColor.white.cgColor
         //self.selectedIndexPath = nil
         collectionViewOutlet.reloadData()
