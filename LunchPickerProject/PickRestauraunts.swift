@@ -11,7 +11,6 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
     var resturantArray : [Resturant] = []
     var resturantsSelected : [Resturant] = []
     var selectedItems = 0
-    var selectedIndexPath : IndexPath?
     
     @IBOutlet weak var collectionViewOutlet: UICollectionView!
     override func viewDidLoad() {
@@ -38,7 +37,7 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
         collectionViewOutlet.delegate = self
         collectionViewOutlet.dataSource = self
         
-        
+        collectionViewOutlet.allowsMultipleSelection = true
         // Do any additional setup after loading the view.
     }
  
@@ -47,7 +46,7 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // return resturantArray.count
-        return 1
+        return resturantArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -55,36 +54,34 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
        // Put images here
            //print(resturantArray.count)
         cell.imageView.image = resturantArray[indexPath.row].resturantLogo
+        
         if resturantArray[indexPath.row].checkSwitch == true {
             cell.layer.backgroundColor = UIColor.green.cgColor
         } else if resturantArray[indexPath.row].checkSwitch == false {
             //print("Deselecting")
             cell.layer.backgroundColor = UIColor.white.cgColor
-        }
-        return cell 
+        } 
+        return cell
         
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("selected")
-        let cell = collectionView.cellForItem(at: indexPath)
-        // collectionView.delaysContentTouches = false
+        let cell = collectionView.cellForItem(at: indexPath) as! CustomnCellClass
         resturantsSelected.append(resturantArray[indexPath.row])
         resturantArray[indexPath.row].checkSwitch = true
         selectedItems += 1
-       // cell!.layer.backgroundColor = UIColor.green.cgColor
-       // self.selectedIndexPath = indexPath
+        //cell.backgroundColor = UIColor.red
         collectionViewOutlet.reloadData()
         
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         print("Deselected")
-        let cell = collectionView.cellForItem(at: indexPath)
-        resturantsSelected.remove(at: indexPath.row)
+        let cell = collectionView.cellForItem(at: indexPath) as! CustomnCellClass
+        //resturantsSelected.remove(at: indexPath.row)
         resturantArray[indexPath.row].checkSwitch = false
         selectedItems -= 1
-        //cell!.layer.backgroundColor = UIColor.white.cgColor
-        //self.selectedIndexPath = nil
+        //cell.backgroundColor = UIColor.clear
         collectionViewOutlet.reloadData()
     }
     

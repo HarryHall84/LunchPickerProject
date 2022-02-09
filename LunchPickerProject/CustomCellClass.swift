@@ -9,6 +9,13 @@ import Foundation
 import UIKit
 class CustomnCellClass:UICollectionViewCell{
     @IBOutlet weak var imageView: UIImageView!
-
+    func checkForSelected(){
+        if (isSelected) {
+            backgroundColor = UIColor.red
+        } else {
+            backgroundColor = UIColor.white 
+        }
+    }
 }
 
+ 
