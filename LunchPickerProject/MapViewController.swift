@@ -15,7 +15,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     var places : [MKMapItem] = []
     var currentLocation : CLLocation!
     var annotation = MKPointAnnotation()
-    
+    var restaurauntSelection : Resturant!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +32,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         mapOutlet.setRegion(theRegion, animated: true)
     }
     
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        currentLocation = locations[0]
+    }
     
     
     

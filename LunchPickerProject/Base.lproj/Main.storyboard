@@ -225,7 +225,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
-                                    <segue destination="PPW-Gz-8tc" kind="show" id="22M-oD-I5t"/>
+                                    <segue destination="PPW-Gz-8tc" kind="show" identifier="toMapView" id="22M-oD-I5t"/>
                                 </connections>
                             </button>
                         </subviews>
