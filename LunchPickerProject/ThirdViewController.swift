@@ -9,7 +9,7 @@ import UIKit
 
 class ThirdViewController: UIViewController {
     var selectedResturants2 : [Resturant] = []
-    var finalResturant : Resturant
+    var finalResturant : Resturant!
     @IBOutlet weak var resturantNamy: UILabel!
     
     override func viewDidLoad() {
@@ -25,11 +25,17 @@ class ThirdViewController: UIViewController {
     }
     
     
-    
-    @IBAction func spinWheel(_ sender: UITapGestureRecognizer) {
+    @IBAction func spinBoy(_ sender: UITapGestureRecognizer) {
         print("count: \(selectedResturants2.count)")
         randomizeResturants()
-        }
+        print("\(finalResturant.restName)")
+    }
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let nvc = segue.destination as? FourthViewController
+        {
+            nvc.finalSelectedResturant = finalResturant
+        }
+    }
+    
 }
