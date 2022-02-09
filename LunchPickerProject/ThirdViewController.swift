@@ -9,7 +9,7 @@ import UIKit
 
 class ThirdViewController: UIViewController {
     var selectedResturants2 : [Resturant] = []
-    var finalResturant : Resturant
+    var finalResturant : Resturant!
     @IBOutlet weak var resturantNamy: UILabel!
     
     override func viewDidLoad() {
