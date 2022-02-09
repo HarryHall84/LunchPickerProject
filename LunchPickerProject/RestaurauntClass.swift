@@ -26,4 +26,6 @@ class Resturant {
         self.checkSwitch = false 
     }
     
+    
+    
 }
