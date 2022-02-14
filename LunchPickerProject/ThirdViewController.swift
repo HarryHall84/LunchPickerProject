@@ -29,6 +29,10 @@ class ThirdViewController: UIViewController {
         print("count: \(selectedResturants2.count)")
         randomizeResturants()
         print("\(finalResturant.restName)")
+        let alert = UIAlertController(title: "Wheel Spun", message: "The wheel selected: \(finalResturant.restName)", preferredStyle: .actionSheet)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(okAction)
+        present(alert, animated: true, completion: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
