@@ -42,7 +42,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBAction func search(_ sender: UIButton) {
         let request = MKLocalSearch.Request() // A class in the class(????) Builds object in the local search
-        request.naturalLanguageQuery = "Culver's"
+        request.naturalLanguageQuery = restaurauntSelection.restName
         let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
        // request.region = MKCoordinateRegion(center: currentLocation.coordinate, span: span)
         let search = MKLocalSearch(request: request)
