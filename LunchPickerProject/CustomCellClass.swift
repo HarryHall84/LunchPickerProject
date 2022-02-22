@@ -7,14 +7,22 @@
 
 import Foundation
 import UIKit
-class CustomnCellClass:UICollectionViewCell{
+class CustomCellClass:UICollectionViewCell{
+    @IBOutlet weak var imageViewOutlet: UIView!
     @IBOutlet weak var imageView: UIImageView!
-    func checkForSelected(){
-        if (isSelected) {
-            backgroundColor = UIColor.red
-        } else {
-            backgroundColor = UIColor.white 
+    override var isHighlighted : Bool {
+        didSet{
+            imageViewOutlet.isHidden = !isHighlighted
         }
+    }
+    override var isSelected: Bool {
+        didSet{
+        imageViewOutlet.isHidden = !isSelected
+        }
+    }
+    
+    func displayContent(image: UIImage){
+        imageView.image = image
     }
 }
 

@@ -11,6 +11,8 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
     var resturantArray : [Resturant] = []
     var resturantsSelected : [Resturant] = []
     var selectedItems = 0
+    var checking = 0
+    let viewImageSegueIdentifier = "viewImageSegueIdentifier"
     
     @IBOutlet weak var collectionViewOutlet: UICollectionView!
     override func viewDidLoad() {
@@ -50,39 +52,76 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! CustomnCellClass
-       // Put images here
-           //print(resturantArray.count)
-        cell.imageView.image = resturantArray[indexPath.row].resturantLogo
-        
-        if resturantArray[indexPath.row].checkSwitch == true {
-            cell.layer.backgroundColor = UIColor.green.cgColor
-        } else if resturantArray[indexPath.row].checkSwitch == false {
-            //print("Deselecting")
-            cell.layer.backgroundColor = UIColor.white.cgColor
-        } 
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! CustomCellClass
+        cell.displayContent(image: resturantArray[indexPath.row].resturantLogo)
         return cell
-        
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("selected")
-        let cell = collectionView.cellForItem(at: indexPath) as! CustomnCellClass
+        if(checking == 1){
+            performSegue(withIdentifier: viewImageSegueIdentifier, sender: indexPath)
+        }
+        print("yeah baby")
         resturantsSelected.append(resturantArray[indexPath.row])
-        resturantArray[indexPath.row].checkSwitch = true
-        selectedItems += 1
-        //cell.backgroundColor = UIColor.red
-        collectionViewOutlet.reloadData()
         
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        print("Deselected")
-        let cell = collectionView.cellForItem(at: indexPath) as! CustomnCellClass
-        //resturantsSelected.remove(at: indexPath.row)
-        resturantArray[indexPath.row].checkSwitch = false
-        selectedItems -= 1
-        //cell.backgroundColor = UIColor.clear
-        collectionViewOutlet.reloadData()
+        print("Sheesh")
+        var nameChecky = resturantArray[indexPath.row].restName
+        var i = 0
+        for deSelected in resturantsSelected{
+            if(nameChecky == deSelected.restName){
+                if(nameChecky == "tacoBell"){
+                    resturantsSelected.remove(at: i)
+                    print("taco")
+                    break
+                }
+                else if(nameChecky == "Mcdonalds"){
+                    resturantsSelected.remove(at: i)
+                    print("mickey")
+                    break
+                }
+                else if(nameChecky == "Burger King"){
+                    resturantsSelected.remove(at: i)
+                    print("burger")
+                    break
+                }
+                else if(nameChecky == "Culvers"){
+                    resturantsSelected.remove(at: i)
+                    print("culver")
+                    break
+                }
+                else if(nameChecky == "Popey's"){
+                        resturantsSelected.remove(at: i)
+                    print("pop")
+                    break
+                }
+                else if(nameChecky == "chick-fill-a"){
+                    resturantsSelected.remove(at: i)
+                    print("chick")
+                    break
+                }
+                else if(nameChecky == "Subway"){
+                    resturantsSelected.remove(at: i)
+                    print("sub")
+                    break
+                }
+                else if(nameChecky == "Jimmy Johns"){
+                    resturantsSelected.remove(at: i)
+                    print("jhons")
+                    break
+                }
+                else if(nameChecky == "Tommy's"){
+                    resturantsSelected.remove(at: i)
+                    print("tom")
+                    break
+                }
+               
+            
+    }
+         i += 1
+            collectionViewOutlet.reloadData()
+    }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -104,3 +143,4 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
         }
     }
 }
+

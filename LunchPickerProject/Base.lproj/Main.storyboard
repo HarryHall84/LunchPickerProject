@@ -64,39 +64,44 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NEC-QI-vt2">
-                                    <size key="itemSize" width="200" height="200"/>
+                                    <size key="itemSize" width="174" height="183"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="myCell" id="Bs9-nI-XFf" customClass="CustomnCellClass" customModule="LunchPickerProject" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="myCell" id="Bs9-nI-XFf" customClass="CustomCellClass" customModule="LunchPickerProject" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="174" height="183"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Uu1-lR-s3Z">
-                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="174" height="183"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hFy-Gl-d2w">
-                                                    <rect key="frame" x="30" y="30" width="140" height="140"/>
+                                                    <rect key="frame" x="10" y="10" width="154" height="163"/>
                                                     <gestureRecognizers/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="180" id="437-II-NZm"/>
-                                                        <constraint firstAttribute="height" constant="180" id="U2C-sv-CeK"/>
-                                                    </constraints>
                                                 </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rR5-L5-WHq">
+                                                    <rect key="frame" x="10" y="10" width="154" height="163"/>
+                                                    <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="hFy-Gl-d2w" firstAttribute="top" secondItem="Uu1-lR-s3Z" secondAttribute="top" constant="30" id="5ET-V4-E7K"/>
-                                                <constraint firstItem="hFy-Gl-d2w" firstAttribute="leading" secondItem="Uu1-lR-s3Z" secondAttribute="leading" constant="30" id="Cgw-Au-3MM"/>
-                                                <constraint firstAttribute="bottom" secondItem="hFy-Gl-d2w" secondAttribute="bottom" constant="30" id="VYZ-ZV-xAZ"/>
-                                                <constraint firstAttribute="trailing" secondItem="hFy-Gl-d2w" secondAttribute="trailing" constant="30" id="wWV-C3-d9l"/>
+                                                <constraint firstItem="hFy-Gl-d2w" firstAttribute="leading" secondItem="Uu1-lR-s3Z" secondAttribute="leading" constant="10" id="6IU-6L-tga"/>
+                                                <constraint firstAttribute="bottom" secondItem="rR5-L5-WHq" secondAttribute="bottom" constant="10" id="8LL-nL-uFa"/>
+                                                <constraint firstItem="rR5-L5-WHq" firstAttribute="leading" secondItem="Uu1-lR-s3Z" secondAttribute="leading" constant="10" id="ENZ-je-wVx"/>
+                                                <constraint firstAttribute="bottom" secondItem="hFy-Gl-d2w" secondAttribute="bottom" constant="10" id="Fhg-7c-Cvn"/>
+                                                <constraint firstAttribute="trailing" secondItem="hFy-Gl-d2w" secondAttribute="trailing" constant="10" id="OwQ-bG-U43"/>
+                                                <constraint firstItem="hFy-Gl-d2w" firstAttribute="top" secondItem="Uu1-lR-s3Z" secondAttribute="top" constant="10" id="adO-Xd-CdI"/>
+                                                <constraint firstItem="rR5-L5-WHq" firstAttribute="top" secondItem="Uu1-lR-s3Z" secondAttribute="top" constant="10" id="cjV-cR-LUb"/>
+                                                <constraint firstAttribute="trailing" secondItem="rR5-L5-WHq" secondAttribute="trailing" constant="10" id="ftl-w8-M22"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <gestureRecognizers/>
-                                        <size key="customSize" width="200" height="200"/>
+                                        <size key="customSize" width="174" height="183"/>
                                         <connections>
                                             <outlet property="imageView" destination="hFy-Gl-d2w" id="8bq-rr-sFC"/>
+                                            <outlet property="imageViewOutlet" destination="rR5-L5-WHq" id="2P6-9m-K8Q"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
