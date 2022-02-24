@@ -56,17 +56,25 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
         cell.displayContent(image: resturantArray[indexPath.row].resturantLogo)
         return cell
     }
+    
+    
+    
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if(checking == 1){
-            performSegue(withIdentifier: viewImageSegueIdentifier, sender: indexPath)
+           performSegue(withIdentifier: viewImageSegueIdentifier, sender: indexPath)
         }
-        print("yeah baby")
-        resturantsSelected.append(resturantArray[indexPath.row])
+       print("yeah baby")
+        var nameChecky = resturantArray[indexPath.row].restName
+        var i = 0
+       resturantsSelected.append(resturantArray[indexPath.row])
+       
+       // print(resturantsSelected[].restName)
         
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        print("Sheesh")
+        print(resturantsSelected)
         var nameChecky = resturantArray[indexPath.row].restName
         var i = 0
         for deSelected in resturantsSelected{
@@ -74,53 +82,62 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
                 if(nameChecky == "tacoBell"){
                     resturantsSelected.remove(at: i)
                     print("taco")
-                    break
+                  //  collectionViewOutlet.reloadData()
+                    return
                 }
                 else if(nameChecky == "Mcdonalds"){
                     resturantsSelected.remove(at: i)
                     print("mickey")
-                    break
+                  //  collectionViewOutlet.reloadData()
+                    return
                 }
                 else if(nameChecky == "Burger King"){
                     resturantsSelected.remove(at: i)
                     print("burger")
-                    break
+                   // collectionViewOutlet.reloadData()
+                    return
                 }
                 else if(nameChecky == "Culvers"){
                     resturantsSelected.remove(at: i)
                     print("culver")
-                    break
+                   // collectionViewOutlet.reloadData()
+                    return
                 }
                 else if(nameChecky == "Popey's"){
                         resturantsSelected.remove(at: i)
                     print("pop")
-                    break
+                  //  collectionViewOutlet.reloadData()
+                    return
                 }
                 else if(nameChecky == "chick-fill-a"){
                     resturantsSelected.remove(at: i)
                     print("chick")
-                    break
+                   // collectionViewOutlet.reloadData()
+                    return
                 }
                 else if(nameChecky == "Subway"){
                     resturantsSelected.remove(at: i)
                     print("sub")
-                    break
+                   // collectionViewOutlet.reloadData()
+                    return
                 }
                 else if(nameChecky == "Jimmy Johns"){
                     resturantsSelected.remove(at: i)
                     print("jhons")
-                    break
+                    //collectionViewOutlet.reloadData()
+                    return
                 }
                 else if(nameChecky == "Tommy's"){
                     resturantsSelected.remove(at: i)
                     print("tom")
-                    break
+                   // collectionViewOutlet.reloadData()
+                    return
                 }
                
             
     }
          i += 1
-            collectionViewOutlet.reloadData()
+          //  collectionViewOutlet.reloadData()
     }
     }
     
@@ -134,7 +151,7 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
         
     }
     @IBAction func continueSelected(_ sender: UIButton) {
-        if selectedItems < 2 {
+        if resturantsSelected.count < 2 {
             let alert = UIAlertController(title: "Error", message: "Select at least 2 restaurants", preferredStyle: .actionSheet)
             let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
             alert.addAction(okAction)
