@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		22BE48C227984F4500A708AD /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BE48C127984F4500A708AD /* ThirdViewController.swift */; };
 		22BE48C427984F5B00A708AD /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BE48C327984F5B00A708AD /* FourthViewController.swift */; };
-		2A3053FF27B3F934008BD252 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3053FE27B3F934008BD252 /* MapViewController.swift */; };
 		2A9EE19527905FE600CED46A /* CustomCellClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9EE19427905FE600CED46A /* CustomCellClass.swift */; };
 		2AAF19AB278C783A0073E6E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF19AA278C783A0073E6E4 /* AppDelegate.swift */; };
 		2AAF19AD278C783A0073E6E4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF19AC278C783A0073E6E4 /* SceneDelegate.swift */; };
@@ -45,7 +44,6 @@
 /* Begin PBXFileReference section */
 		22BE48C127984F4500A708AD /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		22BE48C327984F5B00A708AD /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
-		2A3053FE27B3F934008BD252 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		2A9EE19427905FE600CED46A /* CustomCellClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellClass.swift; sourceTree = "<group>"; };
 		2AAF19A7278C783A0073E6E4 /* LunchPickerProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LunchPickerProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AAF19AA278C783A0073E6E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -118,7 +116,6 @@
 				2AAF19AE278C783A0073E6E4 /* ViewController.swift */,
 				2AAF19DD278C7AFC0073E6E4 /* RestaurauntClass.swift */,
 				2AAF19B0278C783A0073E6E4 /* Main.storyboard */,
-				2A3053FE27B3F934008BD252 /* MapViewController.swift */,
 				22BE48C327984F5B00A708AD /* FourthViewController.swift */,
 				22BE48C127984F4500A708AD /* ThirdViewController.swift */,
 				2A9EE19427905FE600CED46A /* CustomCellClass.swift */,
@@ -282,7 +279,6 @@
 				2AAF19AF278C783A0073E6E4 /* ViewController.swift in Sources */,
 				2AAF19E0278C7C840073E6E4 /* PickRestauraunts.swift in Sources */,
 				2AAF19AB278C783A0073E6E4 /* AppDelegate.swift in Sources */,
-				2A3053FF27B3F934008BD252 /* MapViewController.swift in Sources */,
 				22BE48C427984F5B00A708AD /* FourthViewController.swift in Sources */,
 				2AAF19DE278C7AFC0073E6E4 /* RestaurauntClass.swift in Sources */,
 				2A9EE19527905FE600CED46A /* CustomCellClass.swift in Sources */,

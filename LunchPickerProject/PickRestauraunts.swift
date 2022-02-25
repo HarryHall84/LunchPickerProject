@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+    @IBOutlet weak var butOut: UIButton!
     var resturantArray : [Resturant] = []
     var resturantsSelected : [Resturant] = []
     var selectedItems = 0
@@ -17,13 +18,15 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
     @IBOutlet weak var collectionViewOutlet: UICollectionView!
     override func viewDidLoad() {
                 super.viewDidLoad()
-        var tacoBell = Resturant(adresss: "420 W Virginia St", phoneN: "815-459-3377", restName: "Taco Bell", distance: 10, resturantLogo: "tacoBell", checkSwitch: false)
-        var mcdonalds = Resturant(adresss: "551 Crystal Point Rd", phoneN: "815-455-6630", restName: "Mcdonalds", distance: 10, resturantLogo: "clowning", checkSwitch: false)
-        var burgerKing = Resturant(adresss: "250 W Virginia St, Crystal Lake, IL 60014", phoneN: "815-459-2976", restName: "Burger King", distance: 22, resturantLogo: "burgerKing", checkSwitch: false)
-        var culvers = Resturant(adresss: "400 Pingree Rd Crystal Lake, IL 60014", phoneN: "815-356-9090", restName: "Culvers", distance: 10, resturantLogo: "culvers.png", checkSwitch: false)
-        var popeys = Resturant(adresss: "340 W. Virginia St.Crystal Lake, IL, 60014", phoneN: "779-220-4934", restName: "Popey's", distance: 10, resturantLogo: "popeyes", checkSwitch: false)
-        var chickFille = Resturant(adresss: "4812 Northwest Hwy,Crystal Lake, IL 60014", phoneN: "815-444-8611", restName: "chick-fill-a", distance: 10, resturantLogo:"chick fill a", checkSwitch: false)
-        var subway = Resturant(adresss: "6166 Northwest Hwy, Crystal Lake, IL 60014", phoneN: "815-455-3535", restName: "Subway", distance: 10, resturantLogo: "subway", checkSwitch: false)
+        butOut.titleLabel?.font = UIFont(name: "Arial", size: 30)
+        self.collectionViewOutlet.backgroundColor = UIColor(named: "orange")
+        var tacoBell = Resturant(adresss: "420 W Virginia St", phoneN: "815-459-3377", restName: "Taco Bell", distance: 10, resturantLogo: "tacoBill", checkSwitch: false)
+        var mcdonalds = Resturant(adresss: "551 Crystal Point Rd", phoneN: "815-455-6630", restName: "Mcdonalds", distance: 10, resturantLogo: "macDon", checkSwitch: false)
+        var burgerKing = Resturant(adresss: "250 W Virginia St, Crystal Lake, IL 60014", phoneN: "815-459-2976", restName: "Burger King", distance: 22, resturantLogo: "borgerKing", checkSwitch: false)
+        var culvers = Resturant(adresss: "400 Pingree Rd Crystal Lake, IL 60014", phoneN: "815-356-9090", restName: "Culvers", distance: 10, resturantLogo: "culvers", checkSwitch: false)
+        var popeys = Resturant(adresss: "340 W. Virginia St.Crystal Lake, IL, 60014", phoneN: "779-220-4934", restName: "Popey's", distance: 10, resturantLogo: "papi2", checkSwitch: false)
+        var chickFille = Resturant(adresss: "4812 Northwest Hwy,Crystal Lake, IL 60014", phoneN: "815-444-8611", restName: "chick-fill-a", distance: 10, resturantLogo:"chicken", checkSwitch: false)
+        var subway = Resturant(adresss: "6166 Northwest Hwy, Crystal Lake, IL 60014", phoneN: "815-455-3535", restName: "Subway", distance: 10, resturantLogo: "subbers", checkSwitch: false)
         var jimmyjohns = Resturant(adresss: "5657 Northwest Hwy, Crystal Lake, IL 60014", phoneN: "815-455-2555", restName: "Jimmy Johns", distance: 10, resturantLogo: "jimmyJohns", checkSwitch: false)
         var tommys = Resturant(adresss: "363 W Virginia St, Crystal Lake, IL 60014", phoneN: "815-455-4966", restName: "Tommy's", distance: 10, resturantLogo: "tommys", checkSwitch: false)
         resturantArray.append(culvers)
@@ -79,7 +82,7 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
         var i = 0
         for deSelected in resturantsSelected{
             if(nameChecky == deSelected.restName){
-                if(nameChecky == "tacoBell"){
+                if(nameChecky == "Taco Bell"){
                     resturantsSelected.remove(at: i)
                     print("taco")
                   //  collectionViewOutlet.reloadData()

@@ -20,6 +20,6 @@ class ViewController: UIViewController {
     @IBAction func toCollectionViewBut(_ sender: Any) {
         performSegue(withIdentifier: "segueToCollectionView", sender: nil)
     }
-    
+   
 }
 

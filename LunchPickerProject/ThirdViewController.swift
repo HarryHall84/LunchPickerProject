@@ -11,6 +11,7 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     var selectedResturants2 : [Resturant] = []
     var finalResturant : Resturant!
     @IBOutlet weak var pick: UIPickerView!
+    @IBOutlet weak var butOut2: UIButton!
     @IBOutlet weak var resturantNamy: UILabel!
     var myT = Timer()
     var rand = Int.random(in: 0...10)
@@ -18,6 +19,7 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
      
     override func viewDidLoad() {
         super.viewDidLoad()
+        butOut2.titleLabel?.font = UIFont(name: "Arial", size: 30)
         pick.delegate = self
         pick.dataSource = self
         
