@@ -41,6 +41,7 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     
     func endSpinner(){
         countNum += 1
+        finalResturant = selectedResturants2[rand]
         print("countNum is at: \(countNum)")
         if countNum == 1 {
             
