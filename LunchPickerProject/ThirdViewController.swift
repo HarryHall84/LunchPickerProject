@@ -18,7 +18,7 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     var countNum = 0
     var isSelected = false
     var position = 0
-    var timeInterval = 0.3
+    var timeInterval = 0.2
     var newTimer = false
     var countSecs = 0.0
       
@@ -73,22 +73,27 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
             myT = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(ThirdViewController.movePicker), userInfo: nil, repeats: true)
             newTimer = true
         }
-        if countSecs == 3.2999999999999994 {
+        if countSecs == 3.800000000000001 {
             myT.invalidate()
-            timeInterval = 0.6
+            timeInterval = 0.4
             myT = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(ThirdViewController.movePicker), userInfo: nil, repeats: true)
         }
-        if countSecs == 6.299999999999998 {
+        if countSecs == 8.200000000000005 {
             myT.invalidate()
-            timeInterval = 1
+            timeInterval = 0.5
             myT = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(ThirdViewController.movePicker), userInfo: nil, repeats: true)
         }
-        if countSecs > 6.299999999999998 && position == rand {
+        if countSecs == 13.700000000000005 {
+            myT.invalidate()
+            timeInterval = 0.7
+            myT = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(ThirdViewController.movePicker), userInfo: nil, repeats: true)
+        }
+        if countSecs > 13.700000000000005 && position == rand  {
             isSelected = true
             endSpinner()
         }
         
-        if position == 7 && isSelected == false {
+        if position == selectedResturants2.count - 1 && isSelected == false {
             position = 0
         } else if isSelected == false {
             position += 1

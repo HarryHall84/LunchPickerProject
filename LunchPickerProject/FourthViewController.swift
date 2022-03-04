@@ -28,7 +28,8 @@ class FourthViewController: UIViewController {
         adressOut.text = "Adress: \(finalSelectedResturant.adresss)"
         phoneNumberOut.text = "Phone #: \(finalSelectedResturant.phoneN)"
         distanceOut.text = "Distance: \(finalSelectedResturant.distance) miles"
-        websiteText.text = "Website: \(webLink)"
+       // websiteText.text = "Website: \(webLink)"
+        websiteText.text = "Website: TO BE ADDED SOON"
 
         // Do any additional setup after loading the view.
     }
