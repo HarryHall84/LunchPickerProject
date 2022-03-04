@@ -14,7 +14,7 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     @IBOutlet weak var butOut2: UIButton!
     @IBOutlet weak var resturantNamy: UILabel!
     var myT = Timer()
-    var rand = Int.random(in: 0...10)
+    var rand = Int.random(in: 0...19)
     var countNum = 0
     var isSelected = false
     var position = 0
