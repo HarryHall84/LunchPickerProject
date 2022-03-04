@@ -16,6 +16,11 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     var myT = Timer()
     var rand = Int.random(in: 0...10)
     var countNum = 0
+    var isSelected = false
+    var position = 0
+    var timeInterval = 0.3
+    var newTimer = false
+    var countSecs = 0.0
       
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +30,7 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         
       
         pick.reloadAllComponents()
-        myT = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(ThirdViewController.movePicker), userInfo: nil, repeats: true)
+        myT = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(ThirdViewController.movePicker), userInfo: nil, repeats: false)
         print("Number Generated: \(rand)")
         var i = 0
         // Array 2-5, i = 4, Array 6-9, i = 3
@@ -41,6 +46,7 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     
     func endSpinner(){
         countNum += 1
+        position = rand
         finalResturant = selectedResturants2[rand]
         print("countNum is at: \(countNum)")
         if countNum == 1 {
@@ -63,13 +69,38 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
 
     @objc func movePicker()  {
 
-        let intCount = selectedResturants2.count
-        let position = Int(arc4random_uniform(UInt32(intCount)) + 0)
+        while newTimer == false {
+            myT = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(ThirdViewController.movePicker), userInfo: nil, repeats: true)
+            newTimer = true
+        }
+        if countSecs == 3.2999999999999994 {
+            myT.invalidate()
+            timeInterval = 0.6
+            myT = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(ThirdViewController.movePicker), userInfo: nil, repeats: true)
+        }
+        if countSecs == 6.299999999999998 {
+            myT.invalidate()
+            timeInterval = 1
+            myT = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(ThirdViewController.movePicker), userInfo: nil, repeats: true)
+        }
+        if countSecs > 6.299999999999998 && position == rand {
+            isSelected = true
+            endSpinner()
+        }
+        
+        if position == 7 && isSelected == false {
+            position = 0
+        } else if isSelected == false {
+            position += 1
+        }
+        countSecs += timeInterval
+        print("countSecs at: \(countSecs)")
+        // let position = Int(arc4random_uniform(UInt32(intCount)) + 0)
         print(position)
         
         
         pick.selectRow(position, inComponent: 0, animated: true)
-        switch selectedResturants2.count {
+       /* switch selectedResturants2.count {
         case 72: // Initial array has 9
             if position == rand || position == rand + 9 || position == rand + 18 || position == rand + 27 || position == rand + 36 || position == rand + 45 || position == rand + 54 || position == rand + 63 || position == rand + 72 {
                 endSpinner()
@@ -97,7 +128,7 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         
         default:
             break
-        }
+        } */
   
 
     }

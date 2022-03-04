@@ -17,7 +17,7 @@ class FourthViewController: UIViewController {
     @IBOutlet weak var websiteLink: UILabel!
     @IBOutlet weak var imageStuffOutlet: UIImageView!
     @IBOutlet weak var doneBut: UIButton!
-    
+    var webLink = Link("Test", destination: URL(string: "https://google.com")!)
     var finalSelectedResturant : Resturant!
     
     override func viewDidLoad() {
@@ -28,7 +28,7 @@ class FourthViewController: UIViewController {
         adressOut.text = "Adress: \(finalSelectedResturant.adresss)"
         phoneNumberOut.text = "Phone #: \(finalSelectedResturant.phoneN)"
         distanceOut.text = "Distance: \(finalSelectedResturant.distance) miles"
-        websiteText.text = "Website: "
+        websiteText.text = "Website: \(webLink)"
 
         // Do any additional setup after loading the view.
     }
