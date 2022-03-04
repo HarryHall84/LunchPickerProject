@@ -29,6 +29,16 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
         var subway = Resturant(adresss: "6166 Northwest Hwy", phoneN: "815-455-3535", restName: "Subway", distance: 10, resturantLogo: "subbers", restWebsite: "https://order.subway.com/")
         var jimmyjohns = Resturant(adresss: "5657 Northwest Hwy", phoneN: "815-455-2555", restName: "Jimmy Johns", distance: 10, resturantLogo: "jimmyJohns", restWebsite: "https://www.jimmyjohns.com/")
         var tommys = Resturant(adresss: "363 W Virginia St", phoneN: "815-455-4966", restName: "Tommy's", distance: 10, resturantLogo: "tommys", restWebsite: "https://tommysredhots.com/")
+        var kanes = Resturant(adresss: "5417 Northwest Hwy", phoneN: "815-356-9264", restName: "Raising Cane's", distance: 10, resturantLogo: "canes", restWebsite: "https://www.raisingcanes.com/")
+        var arbys = Resturant(adresss: "6000 Northwest Hwy", phoneN: "815-455-2346", restName: "Arby's", distance: 10, resturantLogo: "arbys", restWebsite: "https://www.arbys.com/")
+        var fiveGuys = Resturant(adresss: "6000 Northwest Hwy", phoneN: "815-479-0430", restName: "Five Guys", distance: 10, resturantLogo: "five", restWebsite: "https://www.fiveguys.com/")
+        var panda = Resturant(adresss: "5260 US-14", phoneN: "815-459-0998", restName: "Panda Express", distance: 10, resturantLogo: "panda", restWebsite: "https://www.pandaexpress.com/")
+        var panera = Resturant(adresss: "6000 Northwest Hwy #56A", phoneN: "815-444-8875", restName:"Panera Bread", distance: 10, resturantLogo: "panera", restWebsite: "https://www.panerabread.com/en-us/home.html")
+        var mcalisters = Resturant(adresss: "5500 Northwest Hwy Route 14", phoneN: "815-893-6298", restName: "Mcalister's", distance: 10, resturantLogo: "mcalister", restWebsite: "https://www.mcalistersdeli.com/")
+        var kfc = Resturant(adresss: "6280 Northwest Hwy", phoneN: "815-459-1330", restName: "KFC", distance: 10, resturantLogo: "kfc", restWebsite: "https://www.kfc.com/")
+        var wendys = Resturant(adresss: "6116 Northwest Hwy", phoneN: "815-455-5222", restName: "Wendy's", distance: 10, resturantLogo: "wendys", restWebsite: "https://www.wendys.com/")
+        var noodleCompany = Resturant(adresss: "4912 Northwest Hwy", phoneN: "815-459-4400", restName:"Noodle and Company", distance: 10, resturantLogo: "noodles", restWebsite: "https://www.noodles.com/")
+        var honeyBakedHam = Resturant(adresss: "5186 Northwest Hwy Ste 139", phoneN: "815-477-4426", restName: "Honey Baked Ham", distance: 10, resturantLogo: "honey", restWebsite: "https://www.honeybaked.com/home")
         resturantArray.append(culvers)
         resturantArray.append(tacoBell)
         resturantArray.append(mcdonalds)
@@ -38,6 +48,16 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
         resturantArray.append(subway)
         resturantArray.append(jimmyjohns)
         resturantArray.append(tommys)
+        resturantArray.append(fiveGuys)
+        resturantArray.append(panda)
+        resturantArray.append(panera)
+        resturantArray.append(mcalisters)
+        resturantArray.append(kfc)
+        resturantArray.append(wendys)
+        resturantArray.append(noodleCompany)
+        resturantArray.append(honeyBakedHam)
+        resturantArray.append(arbys)
+        resturantArray.append(kanes)
         
         collectionViewOutlet.delegate = self
         collectionViewOutlet.dataSource = self
@@ -136,6 +156,39 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
                    // collectionViewOutlet.reloadData()
                     return
                 }
+                else if(nameChecky == "Five Guys"){
+                    resturantsSelected.remove(at: i)
+                    return
+                }
+                else if(nameChecky == "Panda Express"){
+                    resturantsSelected.remove(at: i)
+                    return
+                }
+                else if(nameChecky == "Panera Bread"){
+                    resturantsSelected.remove(at: i)
+                    return
+                }
+                else if(nameChecky == "Mcalister's"){
+                    resturantsSelected.remove(at: i)
+                    return
+                }
+                else if(nameChecky == "KFC"){
+                    resturantsSelected.remove(at: i)
+                    return
+                }
+                else if(nameChecky == "Wendy's"){
+                    resturantsSelected.remove(at: i)
+                    return
+                }
+                else if(nameChecky == "Noodle and Company"){
+                    resturantsSelected.remove(at: i)
+                    return
+                }
+                else{
+                    resturantsSelected.remove(at: i)
+                    return
+                }
+                
                
             
     }
