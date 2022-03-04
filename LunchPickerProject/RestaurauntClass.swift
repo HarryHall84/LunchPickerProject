@@ -12,11 +12,11 @@ class Resturant {
     var adresss : String
     var phoneN : String
     var restName : String
-    var distance : Int
+    var distance : Double
     var resturantLogo : UIImage
     var restWebsite : String
     
-    public init(adresss : String, phoneN : String, restName : String, distance : Int, resturantLogo : String, restWebsite: String)
+    public init(adresss : String, phoneN : String, restName : String, distance : Double, resturantLogo : String, restWebsite: String)
     {
         self.adresss = adresss
         self.phoneN = phoneN
