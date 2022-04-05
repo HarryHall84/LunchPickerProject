@@ -15,6 +15,7 @@ class CustomCellClass:UICollectionViewCell{
             imageViewOutlet.isHidden = !isHighlighted
         }
     }
+    
     override var isSelected: Bool {
         didSet{
         imageViewOutlet.isHidden = !isSelected

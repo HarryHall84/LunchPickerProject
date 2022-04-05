@@ -297,6 +297,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="sii-kI-qzj"/>
         <segue reference="ptU-0U-n23"/>
     </inferredMetricsTieBreakers>
     <resources>
