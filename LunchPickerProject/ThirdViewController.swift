@@ -14,7 +14,7 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     @IBOutlet weak var butOut2: UIButton!
     @IBOutlet weak var resturantNamy: UILabel!
     var myT = Timer()
-    var rand = Int.random(in: 0...19)
+    var rand = Int.random(in: 0...7)
     var countNum = 0
     var isSelected = false
     var position = 0
@@ -34,7 +34,7 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         print("Number Generated: \(rand)")
         var i = 0
         // Array 2-5, i = 4, Array 6-9, i = 3
-         while i < 9 {
+         while i < 3 {
         for i in selectedResturants2 {
             selectedResturants2.append(i)
         }

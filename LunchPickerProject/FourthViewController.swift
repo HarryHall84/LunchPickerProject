@@ -28,10 +28,15 @@ class FourthViewController: UIViewController {
         adressOut.text = "Adress: \(finalSelectedResturant.adresss)"
         phoneNumberOut.text = "Phone #: \(finalSelectedResturant.phoneN)"
         distanceOut.text = "Distance: \(finalSelectedResturant.distance) miles"
-       // websiteText.text = "Website: \(webLink)"
-        websiteText.text = "Website: TO BE ADDED SOON"
-
+        websiteText.text = "Website:"
+        websiteLink.text = finalSelectedResturant.restWebsite
+        websiteLink.textColor = UIColor.blue
         // Do any additional setup after loading the view.
+    }
+    @IBAction func show(){
+        if let url = URL(string: finalSelectedResturant.restWebsite) {
+            UIApplication.shared.open(url)
+        }
     }
     
     
