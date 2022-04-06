@@ -34,11 +34,10 @@ class FourthViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func butToFirstScreen(_ sender: Any) {
-        performSegue(withIdentifier: "segueToFirstScreen", sender: nil)
-        
-    }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        performSegue(withIdentifier: "unWind", sender: self)
+    }
     
 
 }

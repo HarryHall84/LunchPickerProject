@@ -34,7 +34,7 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         print("Number Generated: \(rand)")
         var i = 0
         // Array 2-5, i = 4, Array 6-9, i = 3
-         while i < 4 {
+         while i < 9 {
         for i in selectedResturants2 {
             selectedResturants2.append(i)
         }

@@ -14,7 +14,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LunchPickerProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sandwichIntro" translatesAutoresizingMaskIntoConstraints="NO" id="EJl-kC-2kq">
@@ -55,7 +55,7 @@
             <objects>
                 <viewController id="1N8-NC-4bZ" customClass="PickRestauraunts" customModule="LunchPickerProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bTK-LH-5qX">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nvW-z6-fa8">
@@ -129,14 +129,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iHm-Sn-MBe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1727.536231884058" y="81.696428571428569"/>
+            <point key="canvasLocation" x="1729" y="68"/>
         </scene>
         <!--Third View Controller-->
         <scene sceneID="KaE-AH-r7d">
             <objects>
                 <viewController id="0ZK-5g-gyh" customClass="ThirdViewController" customModule="LunchPickerProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WNl-aD-aub">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7AG-TD-jDq">
@@ -187,14 +187,14 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2508.6956521739135" y="85.714285714285708"/>
+            <point key="canvasLocation" x="2546" y="68"/>
         </scene>
         <!--Fourth View Controller-->
         <scene sceneID="pyv-cN-FN4">
             <objects>
                 <viewController id="lN4-6J-HB0" customClass="FourthViewController" customModule="LunchPickerProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vqh-pv-iAR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Resturant" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wVy-Ry-7Ql">
@@ -233,15 +233,6 @@
                                 <rect key="frame" x="157" y="578" width="247" height="245"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPh-by-UlK">
-                                <rect key="frame" x="14" y="758" width="106" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Done"/>
-                                <connections>
-                                    <action selector="butToFirstScreen:" destination="lN4-6J-HB0" eventType="touchUpInside" id="rxO-xp-PuQ"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Website:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pi9-Wl-F7y">
                                 <rect key="frame" x="10" y="519" width="99" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -256,6 +247,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPh-by-UlK">
+                                <rect key="frame" x="20" y="758" width="106" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Done"/>
+                                <connections>
+                                    <segue destination="Jgs-cx-ogI" kind="unwind" identifier="unWind" unwindAction="unwind:" id="jMQ-jd-5a8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CFC-Mk-w21"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
@@ -270,12 +270,12 @@
                         <outlet property="titleResturant" destination="wVy-Ry-7Ql" id="ZXr-Yw-ioq"/>
                         <outlet property="websiteLink" destination="JdG-zr-rXY" id="wAg-GQ-V4k"/>
                         <outlet property="websiteText" destination="pi9-Wl-F7y" id="Hl9-r1-oeH"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="segueToFirstScreen" id="ptU-0U-n23"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X3x-uU-j8t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Jgs-cx-ogI" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3353.6231884057975" y="85.714285714285708"/>
+            <point key="canvasLocation" x="3362" y="68"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Qqj-hh-M8D">
@@ -296,10 +296,6 @@
             <point key="canvasLocation" x="18.840579710144929" y="67.633928571428569"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="sii-kI-qzj"/>
-        <segue reference="ptU-0U-n23"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="sandwichFinalScreen" width="1688" height="2220"/>
         <image name="sandwichIntro" width="2435" height="2310"/>
