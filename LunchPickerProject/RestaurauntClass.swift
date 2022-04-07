@@ -15,8 +15,9 @@ class Resturant {
     var distance : Double
     var resturantLogo : UIImage
     var restWebsite : String
+    var googleLink : String
     
-    public init(adresss : String, phoneN : String, restName : String, distance : Double, resturantLogo : String, restWebsite: String)
+    public init(adresss : String, phoneN : String, restName : String, distance : Double, resturantLogo : String, restWebsite: String,googleLink:String)
     {
         self.adresss = adresss
         self.phoneN = phoneN
@@ -24,6 +25,7 @@ class Resturant {
         self.distance = distance
         self.resturantLogo = UIImage(named: resturantLogo)!
         self.restWebsite = restWebsite
+        self.googleLink = googleLink
     }
     
     

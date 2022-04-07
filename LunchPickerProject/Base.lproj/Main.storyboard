@@ -253,12 +253,16 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adress: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HUB-YG-XT1">
                                 <rect key="frame" x="10" y="342" width="404" height="36"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="OVQ-rV-CKY"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="cxT-YI-4Jr" appends="YES" id="xbK-R3-3Jy"/>
+                                </connections>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone #:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LwR-ei-mw8">
                                 <rect key="frame" x="10" y="400" width="394" height="36"/>
@@ -367,6 +371,11 @@
                 <tapGestureRecognizer id="rMs-63-guz">
                     <connections>
                         <action selector="show" destination="lN4-6J-HB0" id="kfh-mh-m1i"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="cxT-YI-4Jr">
+                    <connections>
+                        <action selector="addresses" destination="lN4-6J-HB0" id="oSv-ir-rd7"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
