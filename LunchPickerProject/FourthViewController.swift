@@ -41,6 +41,11 @@ class FourthViewController: UIViewController {
         }
     }
     
+    @IBAction func addresses(){
+        if let url = URL(string: finalSelectedResturant.googleLink) {
+            UIApplication.shared.open(url)
+        }
+    }
     
     override func viewWillDisappear(_ animated: Bool) {
         performSegue(withIdentifier: "unWind", sender: self)
