@@ -18,6 +18,8 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
     
     override func viewDidLoad() {
                 super.viewDidLoad()
+        self.navigationItem.leftBarButtonItem = nil
+        self.navigationItem.hidesBackButton = true
         butOut.titleLabel?.font = UIFont(name: "Arial", size: 30)
         self.collectionViewOutlet.backgroundColor = UIColor(named: "orange")
         let tacoBell = Resturant(adresss: "420 W Virginia St", phoneN: "815-459-3377", restName: "Taco Bell", distance: 1.1, resturantLogo: "tacoBill", restWebsite: "https://www.tacobell.com/")
@@ -211,7 +213,7 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
     }
     @IBAction func continueSelected(_ sender: UIButton) {
         if resturantsSelected.count < 2 {
-            let alert = UIAlertController(title: "Error", message: "Select at least 2 restaurants", preferredStyle: .actionSheet)
+            let alert = UIAlertController(title: "Error", message: "Select at least 2 restaurants", preferredStyle: .alert)
             let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
             alert.addAction(okAction)
             present(alert, animated: true, completion: nil)

@@ -24,6 +24,8 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
       
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.leftBarButtonItem = nil
+        self.navigationItem.hidesBackButton = true
         butOut2.titleLabel?.font = UIFont(name: "Arial", size: 30)
         pick.delegate = self
         pick.dataSource = self
@@ -130,6 +132,17 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         let randomInt = Int.random(in: 0..<randdoNum)
         finalResturant  = selectedResturants2[randomInt]
     }
+    
+    
+    @IBAction func contBut(_ sender: UIButton) {
+        if isSelected == false {
+            let alert  = UIAlertController(title: "Error", message: "Do not press continue while the wheel is spinning", preferredStyle: .alert)
+            let buttonOK = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
+            alert.addAction(buttonOK)
+            present(alert, animated: true, completion: nil)
+    }
+}
+    
     
     
     
