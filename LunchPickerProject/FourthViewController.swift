@@ -47,6 +47,12 @@ class FourthViewController: UIViewController {
         }
     }
     
+    @IBAction func calls(){
+        if let url = URL(string: "tel://8155750914"){
+            UIApplication.shared.openURL(url)
+        }
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         performSegue(withIdentifier: "unWind", sender: self)
     }
