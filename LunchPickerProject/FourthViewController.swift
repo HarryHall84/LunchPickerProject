@@ -48,7 +48,8 @@ class FourthViewController: UIViewController {
     }
     
     @IBAction func calls(){
-        if let url = URL(string: "tel://8155750914"){
+        //8155750914
+        if let url = URL(string: "tel://\(finalSelectedResturant.phoneN)"){
             UIApplication.shared.openURL(url)
         }
     }
