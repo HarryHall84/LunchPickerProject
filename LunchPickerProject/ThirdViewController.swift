@@ -70,6 +70,12 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     //MARK: - move picker
 
     @objc func movePicker()  {
+        
+        if isSelected == false {
+            butOut2.frame.origin = CGPoint(x: -50, y: -50)
+        } else {
+            butOut2.frame.origin = CGPoint(x: 97.0, y: 768.0)
+        }
 
         while newTimer == false {
             myT = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(ThirdViewController.movePicker), userInfo: nil, repeats: true)
