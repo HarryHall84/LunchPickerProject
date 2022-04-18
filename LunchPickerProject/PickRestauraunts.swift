@@ -20,7 +20,6 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
                 super.viewDidLoad()
         self.navigationItem.leftBarButtonItem = nil
         self.navigationItem.hidesBackButton = true
-        butOut.titleLabel?.font = UIFont(name: "Arial", size: 30)
         self.collectionViewOutlet.backgroundColor = UIColor(named: "orange")
         let tacoBell = Resturant(adresss: "420 W Virginia St", phoneN: "815-459-3377", restName: "Taco Bell", distance: 1.1, resturantLogo: "tacoBill", restWebsite: "https://www.tacobell.com/", googleLink: "https://www.google.com/maps/place/Taco+Bell/@42.2348975,-88.3377115,16.52z/data=!4m5!3m4!1s0x880f6d457dc06281:0x7ab43f8290fe04e6!8m2!3d42.2344015!4d-88.3362043")
         let mcdonalds = Resturant(adresss: "551 Crystal Point Rd", phoneN: "815-455-6630", restName: "Mcdonalds", distance: 1.9, resturantLogo: "macDon", restWebsite: "https://www.mcdonalds.com/us/en-us.html", googleLink: "https://www.google.com/maps/place/McDonald's/@42.2247002,-88.3136738,16.61z/data=!4m12!1m6!3m5!1s0x0:0x28069388f397bb6f!2sBurger+King!8m2!3d42.2293836!4d-88.330245!3m4!1s0x0:0xcd1a8559626496ee!8m2!3d42.2254935!4d-88.3113885")
