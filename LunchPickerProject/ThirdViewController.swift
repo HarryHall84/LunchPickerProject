@@ -26,7 +26,6 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         super.viewDidLoad()
         self.navigationItem.leftBarButtonItem = nil
         self.navigationItem.hidesBackButton = true
-        butOut2.titleLabel?.font = UIFont(name: "Arial", size: 30)
         pick.delegate = self
         pick.dataSource = self
         

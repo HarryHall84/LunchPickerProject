@@ -24,7 +24,6 @@ class FourthViewController: UIViewController {
         super.viewDidLoad()
         self.navigationItem.leftBarButtonItem = nil
         self.navigationItem.hidesBackButton = true
-        doneBut.titleLabel?.font = UIFont(name: "Arial", size: 30)
         titleResturant.text = "\(finalSelectedResturant.restName)"
         imageStuffOutlet.image = finalSelectedResturant.resturantLogo
         adressOut.text = "Adress: \(finalSelectedResturant.adresss)"
