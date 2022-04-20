@@ -102,8 +102,8 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
            performSegue(withIdentifier: viewImageSegueIdentifier, sender: indexPath)
         }
        print("yeah baby")
-        var nameChecky = resturantArray[indexPath.row].restName
-        var i = 0
+//        var nameChecky = resturantArray[indexPath.row].restName
+//        var i = 0
        resturantsSelected.append(resturantArray[indexPath.row])
        
        // print(resturantsSelected[].restName)
@@ -112,7 +112,7 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         print(resturantsSelected)
-        var nameChecky = resturantArray[indexPath.row].restName
+        let nameChecky = resturantArray[indexPath.row].restName
         var i = 0
         for deSelected in resturantsSelected{
             if(nameChecky == deSelected.restName){
