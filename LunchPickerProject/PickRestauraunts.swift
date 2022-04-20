@@ -198,7 +198,27 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
                     resturantsSelected.remove(at: i)
                     return
                 }
-                else{
+                else if(nameChecky == "Honey Baked Ham"){
+                    resturantsSelected.remove(at: i)
+                    return
+                }
+                else if(nameChecky == "Chipotle"){
+                    resturantsSelected.remove(at: i)
+                    return
+                }
+                else if(nameChecky == "Breaking Bread"){
+                    resturantsSelected.remove(at: i)
+                    return
+                }
+                else if(nameChecky == "Freddy's"){
+                    resturantsSelected.remove(at: i)
+                    return
+                }
+                else if(nameChecky == "Potbelly Sandwich Shop"){
+                    resturantsSelected.remove(at: i)
+                    return
+                }
+                else if(nameChecky == "Portillo's Hot Dog"){
                     resturantsSelected.remove(at: i)
                     return
                 }
