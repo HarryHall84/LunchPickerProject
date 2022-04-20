@@ -43,6 +43,8 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
         let chipotle = Resturant(adresss: "5006 Northwest Hwy Ste A, Crystal Lake, IL 60014", phoneN: "815-444-1532", restName: "Chipotle", distance: 0, resturantLogo: "chipotle.png", restWebsite: "https://locations.chipotle.com/il/crystal-lake/5006-northwest-hwy", googleLink: "https://www.google.com/maps/place/Chipotle+Mexican+Grill/@42.2296032,-88.4456695,10.84z/data=!4m9!1m2!2m1!1schipotle!3m5!1s0x880f72cd821c4c2f:0x30260a879a6f51a7!8m2!3d42.2267599!4d-88.2949654!15sCghjaGlwb3RsZSIDiAEBWgoiCGNoaXBvdGxlkgESbWV4aWNhbl9yZXN0YXVyYW50")
         let breakingBread = Resturant(adresss: "230 W Virginia St #250, Crystal Lake, IL 60014", phoneN: "815-893-6510", restName: "Breaking Bread", distance: 0, resturantLogo: "breakingBread.png", restWebsite: "https://www.breakingbreadrestaurants.com/", googleLink: "https://www.google.com/maps/place/Breaking+Bread+-+Crystal+Lake/@42.2293721,-88.3307962,17z/data=!3m1!4b1!4m5!3m4!1s0x880f6d56a97e0b33:0xf92a9cb61ac55157!8m2!3d42.2293721!4d-88.3286022")
         let freddys = Resturant(adresss: "F2, 5500 Northwest Hwy Unit A, Crystal Lake, IL 60014", phoneN: "779-220-2345", restName: "Freddy's", distance: 0, resturantLogo: "freddy.png", restWebsite: "https://freddysusa.com/store/crystal-lake/", googleLink: "https://www.google.com/maps/place/Freddy's+Frozen+Custard+%26+Steakburgers/@42.2033054,-88.3319803,11z/data=!4m9!1m2!2m1!1sfreddy's!3m5!1s0x880f73f195f5e465:0xb0d049421c32542e!8m2!3d42.2269412!4d-88.3044568!15sCghmcmVkZHkncyIDiAEBWgoiCGZyZWRkeSdzkgEUaGFtYnVyZ2VyX3Jlc3RhdXJhbnQ")
+        let potbelly = Resturant(adresss: "5900 Northwest Hwy", phoneN: "779-220-5094", restName: "Potbelly Sandwich Shop", distance: 0, resturantLogo: "potbellys", restWebsite: "https://www.potbelly.com/", googleLink: "https://www.google.com/maps/place/Potbelly+Sandwich+Shop/@42.2264645,-88.3149807,17z/data=!3m1!4b1!4m5!3m4!1s0x880f72b27e28b761:0x85e8a54e26e15ce6!8m2!3d42.2266154!4d-88.3127969")
+        let portillos = Resturant(adresss: "855 Cog Cir", phoneN: "815-788-0900", restName: "Portillo's Hot Dog", distance: 0, resturantLogo: "", restWebsite: "https://www.portillos.com/index.html", googleLink: "https://www.google.com/maps/place/Portillo's+Hot+Dogs/@42.2269253,-88.2934733,17z/data=!3m1!4b1!4m5!3m4!1s0x880f72d4266d85a1:0xb682bdb177e4e80b!8m2!3d42.2269214!4d-88.2889886?hl=en")
         resturantArray.append(culvers)
         resturantArray.append(tacoBell)
         resturantArray.append(mcdonalds)
@@ -65,6 +67,8 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
         resturantArray.append(freddys)
         resturantArray.append(breakingBread)
         resturantArray.append(chipotle)
+        resturantArray.append(potbelly)
+        resturantArray.append(portillos)
         
         collectionViewOutlet.delegate = self
         collectionViewOutlet.dataSource = self
