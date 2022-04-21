@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     // Initial Program
     override func viewDidLoad() {
         super.viewDidLoad()
+        titleButtonSegue.layer.cornerRadius = 25
         // Do any additional setup after loading the view.
         //mateo is here
     }

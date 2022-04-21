@@ -22,6 +22,7 @@ class FourthViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        doneBut.layer.cornerRadius = 25
         self.navigationItem.leftBarButtonItem = nil
         self.navigationItem.hidesBackButton = true
         titleResturant.text = "\(finalSelectedResturant.restName)"
