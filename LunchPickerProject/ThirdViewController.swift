@@ -14,13 +14,15 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     @IBOutlet weak var butOut2: UIButton!
     @IBOutlet weak var resturantNamy: UILabel!
     var myT = Timer()
-    var rand = Int.random(in: 0...7)
+    var rand = Int.random(in: 1...PickRestauraunts.selectedItems)
     var countNum = 0
     var isSelected = false
     var position = 0
-    var timeInterval = 0.2
+    var timeInterval = 0.05
     var newTimer = false
     var countSecs = 0.0
+    var amountInWheel = PickRestauraunts.selectedItems
+    var spot = 1
       
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,11 +33,11 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         
       
         pick.reloadAllComponents()
-        myT = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(ThirdViewController.movePicker), userInfo: nil, repeats: false)
+        
         print("Number Generated: \(rand)")
         var i = 0
         // Array 2-5, i = 4, Array 6-9, i = 3
-         while i < 3 {
+         while i < 14 {
         for i in selectedResturants2 {
             selectedResturants2.append(i)
         }
@@ -43,6 +45,13 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         }
         print("Stuff created: \(selectedResturants2.count)")
         // Do any additional setup after loading the view.
+        amountInWheel = selectedResturants2.count
+    }
+    @IBAction func swipeUp(_ sender: UISwipeGestureRecognizer) {
+        myT = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(ThirdViewController.movePicker), userInfo: nil, repeats: false)
+    }
+    @IBAction func swipeDown(_ sender: UISwipeGestureRecognizer) {
+        myT = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(ThirdViewController.movePicker), userInfo: nil, repeats: false)
     }
     
     func endSpinner(){
@@ -80,22 +89,22 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
             myT = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(ThirdViewController.movePicker), userInfo: nil, repeats: true)
             newTimer = true
         }
-        if countSecs == 3.800000000000001 {
+        if position == 150 {
+            myT.invalidate()
+            timeInterval = 0.1
+            myT = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(ThirdViewController.movePicker), userInfo: nil, repeats: true)
+        }
+        if position == 180 {
+            myT.invalidate()
+            timeInterval = 0.2
+            myT = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(ThirdViewController.movePicker), userInfo: nil, repeats: true)
+        }
+        if position == 190 {
             myT.invalidate()
             timeInterval = 0.4
             myT = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(ThirdViewController.movePicker), userInfo: nil, repeats: true)
         }
-        if countSecs == 8.200000000000005 {
-            myT.invalidate()
-            timeInterval = 0.5
-            myT = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(ThirdViewController.movePicker), userInfo: nil, repeats: true)
-        }
-        if countSecs == 13.700000000000005 {
-            myT.invalidate()
-            timeInterval = 0.7
-            myT = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(ThirdViewController.movePicker), userInfo: nil, repeats: true)
-        }
-        if countSecs > 13.700000000000005 && position == rand  {
+        if position > 190 && spot == rand  {
             isSelected = true
             endSpinner()
         }
@@ -109,6 +118,11 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         print("countSecs at: \(countSecs)")
         // let position = Int(arc4random_uniform(UInt32(intCount)) + 0)
         print(position)
+        print(spot)
+        spot = spot + 1
+        if spot > PickRestauraunts.selectedItems {
+            spot = 1
+        }
         
         
         pick.selectRow(position, inComponent: 0, animated: true)

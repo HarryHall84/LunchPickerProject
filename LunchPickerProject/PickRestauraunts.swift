@@ -11,7 +11,7 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
     @IBOutlet weak var butOut: UIButton!
     var resturantArray : [Resturant] = []
     var resturantsSelected : [Resturant] = []
-    var selectedItems = 0
+    static var selectedItems = 0
     var checking = 0
     let viewImageSegueIdentifier = "viewImageSegueIdentifier"
     @IBOutlet weak var collectionViewOutlet: UICollectionView!
@@ -102,6 +102,7 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
            performSegue(withIdentifier: viewImageSegueIdentifier, sender: indexPath)
         }
        print("yeah baby")
+        PickRestauraunts.selectedItems = PickRestauraunts.selectedItems + 1
 //        var nameChecky = resturantArray[indexPath.row].restName
 //        var i = 0
        resturantsSelected.append(resturantArray[indexPath.row])
@@ -119,107 +120,129 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
                 if(nameChecky == "Taco Bell"){
                     resturantsSelected.remove(at: i)
                     print("taco")
+                    PickRestauraunts.selectedItems = PickRestauraunts.selectedItems - 1
                   //  collectionViewOutlet.reloadData()
                     return
                 }
                 else if(nameChecky == "Mcdonalds"){
                     resturantsSelected.remove(at: i)
                     print("mickey")
+                    PickRestauraunts.selectedItems = PickRestauraunts.selectedItems - 1
                   //  collectionViewOutlet.reloadData()
                     return
                 }
                 else if(nameChecky == "Burger King"){
                     resturantsSelected.remove(at: i)
                     print("burger")
+                    PickRestauraunts.selectedItems = PickRestauraunts.selectedItems - 1
                    // collectionViewOutlet.reloadData()
                     return
                 }
                 else if(nameChecky == "Culvers"){
                     resturantsSelected.remove(at: i)
                     print("culver")
+                    PickRestauraunts.selectedItems = PickRestauraunts.selectedItems - 1
                    // collectionViewOutlet.reloadData()
                     return
                 }
                 else if(nameChecky == "Popey's"){
                         resturantsSelected.remove(at: i)
                     print("pop")
+                    PickRestauraunts.selectedItems = PickRestauraunts.selectedItems - 1
                   //  collectionViewOutlet.reloadData()
                     return
                 }
                 else if(nameChecky == "chick-fill-a"){
                     resturantsSelected.remove(at: i)
                     print("chick")
+                    PickRestauraunts.selectedItems = PickRestauraunts.selectedItems - 1
                    // collectionViewOutlet.reloadData()
                     return
                 }
                 else if(nameChecky == "Subway"){
                     resturantsSelected.remove(at: i)
                     print("sub")
+                    PickRestauraunts.selectedItems = PickRestauraunts.selectedItems - 1
                    // collectionViewOutlet.reloadData()
                     return
                 }
                 else if(nameChecky == "Jimmy Johns"){
                     resturantsSelected.remove(at: i)
                     print("jhons")
+                    PickRestauraunts.selectedItems = PickRestauraunts.selectedItems - 1
                     //collectionViewOutlet.reloadData()
                     return
                 }
                 else if(nameChecky == "Tommy's"){
                     resturantsSelected.remove(at: i)
                     print("tom")
+                    PickRestauraunts.selectedItems = PickRestauraunts.selectedItems - 1
                    // collectionViewOutlet.reloadData()
                     return
                 }
                 else if(nameChecky == "Five Guys"){
                     resturantsSelected.remove(at: i)
+                    PickRestauraunts.selectedItems = PickRestauraunts.selectedItems - 1
                     return
                 }
                 else if(nameChecky == "Panda Express"){
                     resturantsSelected.remove(at: i)
+                    PickRestauraunts.selectedItems = PickRestauraunts.selectedItems - 1
                     return
                 }
                 else if(nameChecky == "Panera Bread"){
                     resturantsSelected.remove(at: i)
+                    PickRestauraunts.selectedItems = PickRestauraunts.selectedItems - 1
                     return
                 }
                 else if(nameChecky == "Mcalister's"){
                     resturantsSelected.remove(at: i)
+                    PickRestauraunts.selectedItems = PickRestauraunts.selectedItems - 1
                     return
                 }
                 else if(nameChecky == "KFC"){
                     resturantsSelected.remove(at: i)
+                    PickRestauraunts.selectedItems = PickRestauraunts.selectedItems - 1
                     return
                 }
                 else if(nameChecky == "Wendy's"){
                     resturantsSelected.remove(at: i)
+                    PickRestauraunts.selectedItems = PickRestauraunts.selectedItems - 1
                     return
                 }
                 else if(nameChecky == "Noodle and Company"){
                     resturantsSelected.remove(at: i)
+                    PickRestauraunts.selectedItems = PickRestauraunts.selectedItems - 1
                     return
                 }
                 else if(nameChecky == "Honey Baked Ham"){
                     resturantsSelected.remove(at: i)
+                    PickRestauraunts.selectedItems = PickRestauraunts.selectedItems - 1
                     return
                 }
                 else if(nameChecky == "Chipotle"){
                     resturantsSelected.remove(at: i)
+                    PickRestauraunts.selectedItems = PickRestauraunts.selectedItems - 1
                     return
                 }
                 else if(nameChecky == "Breaking Bread"){
                     resturantsSelected.remove(at: i)
+                    PickRestauraunts.selectedItems = PickRestauraunts.selectedItems - 1
                     return
                 }
                 else if(nameChecky == "Freddy's"){
                     resturantsSelected.remove(at: i)
+                    PickRestauraunts.selectedItems = PickRestauraunts.selectedItems - 1
                     return
                 }
                 else if(nameChecky == "Potbelly Sandwich Shop"){
                     resturantsSelected.remove(at: i)
+                    PickRestauraunts.selectedItems = PickRestauraunts.selectedItems - 1
                     return
                 }
                 else if(nameChecky == "Portillo's Hot Dog"){
                     resturantsSelected.remove(at: i)
+                    PickRestauraunts.selectedItems = PickRestauraunts.selectedItems - 1
                     return
                 }
                 
