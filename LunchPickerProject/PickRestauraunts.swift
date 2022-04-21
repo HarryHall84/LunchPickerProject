@@ -18,6 +18,7 @@ class PickRestauraunts: UIViewController, UICollectionViewDataSource, UICollecti
     
     override func viewDidLoad() {
                 super.viewDidLoad()
+        butOut.layer.cornerRadius = 15
         self.navigationItem.leftBarButtonItem = nil
         self.navigationItem.hidesBackButton = true
         self.collectionViewOutlet.backgroundColor = UIColor(named: "orange")
