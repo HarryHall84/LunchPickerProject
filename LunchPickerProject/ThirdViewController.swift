@@ -26,6 +26,7 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
       
     override func viewDidLoad() {
         super.viewDidLoad()
+        butOut2.layer.cornerRadius = 25
         self.navigationItem.leftBarButtonItem = nil
         self.navigationItem.hidesBackButton = true
         pick.delegate = self
