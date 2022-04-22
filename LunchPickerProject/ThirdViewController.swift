@@ -32,6 +32,7 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         pick.delegate = self
         pick.dataSource = self
         
+        
       
         pick.reloadAllComponents()
         
@@ -143,6 +144,7 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
    }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        
         return "\(selectedResturants2[row].restName)"
     }
     
