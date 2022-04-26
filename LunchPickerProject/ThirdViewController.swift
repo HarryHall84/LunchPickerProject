@@ -68,7 +68,9 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         myT.invalidate()
 
             let alert = UIAlertController(title: "Resturaunt Selected", message: "It selected: \(selectedResturants2[rand].restName)", preferredStyle: .alert)
-        let buttonOK = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
+            let buttonOK = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) { (action) in
+                self.performSegue(withIdentifier: "screen3ToScreen4", sender: nil)
+            }
 
 
         alert.addAction(buttonOK)
