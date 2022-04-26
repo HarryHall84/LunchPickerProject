@@ -145,7 +145,7 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
    }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        
+        pickerView.subviews[1].backgroundColor = UIColor(red: 255/100, green: 50/100, blue: 255/100, alpha: 25/255)
         return "\(selectedResturants2[row].restName)"
     }
     
