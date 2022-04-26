@@ -29,8 +29,7 @@ class FourthViewController: UIViewController {
         imageStuffOutlet.image = finalSelectedResturant.resturantLogo
         adressOut.text = "Adress: \(finalSelectedResturant.adresss)"
         phoneNumberOut.text = "Phone #: \(finalSelectedResturant.phoneN)"
-        websiteText.text = "Website:"
-        websiteLink.text = finalSelectedResturant.restWebsite
+        websiteLink.text = "Go to Website"
         websiteLink.textColor = UIColor.blue
         // Do any additional setup after loading the view.
     }
