@@ -57,6 +57,7 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     }
     
     func endSpinner(){
+        
         countNum += 1
         position = rand
         finalResturant = selectedResturants2[rand]
@@ -106,7 +107,9 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         }
         if position > 190 && spot == rand  {
             isSelected = true
+            
             endSpinner()
+            return
         }
         
         if position == selectedResturants2.count - 1 && isSelected == false {
