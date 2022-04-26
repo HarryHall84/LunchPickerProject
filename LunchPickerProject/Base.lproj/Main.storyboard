@@ -178,7 +178,7 @@
                                     <segue destination="lN4-6J-HB0" kind="show" identifier="screen3ToScreen4" id="sii-kI-qzj"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oai-ld-aBR">
+                            <pickerView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oai-ld-aBR">
                                 <rect key="frame" x="0.0" y="244" width="2874.5" height="216"/>
                             </pickerView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="title2" translatesAutoresizingMaskIntoConstraints="NO" id="EKb-Ji-sUn">
