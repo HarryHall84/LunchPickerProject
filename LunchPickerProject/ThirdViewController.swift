@@ -61,6 +61,7 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         position = rand
         finalResturant = selectedResturants2[rand]
         print("countNum is at: \(countNum)")
+        butOut2.isHidden = false 
         if countNum == 1 {
             
         myT.invalidate()
@@ -82,11 +83,8 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     @objc func movePicker()  {
         
         if isSelected == false {
-            butOut2.frame.origin = CGPoint(x: -50, y: -50)
-        } else {
-            butOut2.frame.origin = CGPoint(x: 97.0, y: 768.0)
+            butOut2.isHidden = true
         }
-
         while newTimer == false {
             myT = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(ThirdViewController.movePicker), userInfo: nil, repeats: true)
             newTimer = true
