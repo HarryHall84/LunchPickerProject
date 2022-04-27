@@ -62,12 +62,15 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         position = rand
         finalResturant = selectedResturants2[rand]
         print("countNum is at: \(countNum)")
+        butOut2.isHidden = false 
         if countNum == 1 {
             
         myT.invalidate()
 
             let alert = UIAlertController(title: "Resturaunt Selected", message: "It selected: \(selectedResturants2[rand].restName)", preferredStyle: .alert)
-        let buttonOK = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
+            let buttonOK = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) { (action) in
+                self.performSegue(withIdentifier: "screen3ToScreen4", sender: nil)
+            }
 
 
         alert.addAction(buttonOK)
@@ -83,11 +86,8 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     @objc func movePicker()  {
         
         if isSelected == false {
-            butOut2.frame.origin = CGPoint(x: -50, y: -50)
-        } else {
-            butOut2.frame.origin = CGPoint(x: 97.0, y: 768.0)
+            butOut2.isHidden = true
         }
-
         while newTimer == false {
             myT = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(ThirdViewController.movePicker), userInfo: nil, repeats: true)
             newTimer = true
@@ -146,7 +146,7 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
    }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        
+        pickerView.subviews[1].backgroundColor = UIColor(red: 255/100, green: 50/100, blue: 255/100, alpha: 25/255)
         return "\(selectedResturants2[row].restName)"
     }
     
