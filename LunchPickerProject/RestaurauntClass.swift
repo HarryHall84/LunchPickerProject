@@ -17,7 +17,7 @@ class Resturant {
     var restWebsite : String
     var googleLink : String
     
-    public init(adresss : String, phoneN : String, restName : String, distance : Double, resturantLogo : String, restWebsite: String,googleLink:String)
+    public init(adresss : String, phoneN : String, restName : String, distance : Double, resturantLogo : String, restWebsite: String, googleLink:String)
     {
         self.adresss = adresss
         self.phoneN = phoneN
