@@ -107,9 +107,8 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
             timeInterval = 0.4
             myT = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(ThirdViewController.movePicker), userInfo: nil, repeats: true)
         }
-        if position > 190 && spot == rand  {
+        if position > 190 && spot == rand + 1  {
             isSelected = true
-            
             endSpinner()
             return
         }
