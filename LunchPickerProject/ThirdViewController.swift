@@ -26,7 +26,7 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
       
     override func viewDidLoad() {
         super.viewDidLoad()
-        butOut2.layer.cornerRadius = 25
+        
         self.navigationItem.leftBarButtonItem = nil
         self.navigationItem.hidesBackButton = true
         pick.delegate = self
@@ -84,10 +84,6 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     //MARK: - move picker
 
     @objc func movePicker()  {
-        
-        if isSelected == false {
-            butOut2.isHidden = true
-        }
         while newTimer == false {
             myT = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(ThirdViewController.movePicker), userInfo: nil, repeats: true)
             newTimer = true
@@ -107,11 +103,21 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
             timeInterval = 0.4
             myT = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(ThirdViewController.movePicker), userInfo: nil, repeats: true)
         }
-        if position > 190 && spot == rand + 1  {
-            isSelected = true
-            endSpinner()
-            return
+        if amountInWheel == 2 {
+            if position >= 190 && spot == rand {
+                isSelected = true
+                endSpinner()
+                return
+            }
+        } else {
+            if position >= 190 && spot - 1 == rand {
+                isSelected = true
+                endSpinner()
+                return
+            }
         }
+        
+        
         
         if position == selectedResturants2.count - 1 && isSelected == false {
             position = 0
