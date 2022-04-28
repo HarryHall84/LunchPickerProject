@@ -11,10 +11,9 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     var selectedResturants2 : [Resturant] = []
     var finalResturant : Resturant!
     @IBOutlet weak var pick: UIPickerView!
-    @IBOutlet weak var butOut2: UIButton!
     @IBOutlet weak var resturantNamy: UILabel!
     var myT = Timer()
-    var rand = Int.random(in: 0...PickRestauraunts.selectedItems)
+    var rand = Int.random(in: 1...PickRestauraunts.selectedItems)
     var countNum = 0
     var isSelected = false
     var position = 0
@@ -26,6 +25,8 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
       
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("Rand is at: \(rand)")
+        
         
         self.navigationItem.leftBarButtonItem = nil
         self.navigationItem.hidesBackButton = true
@@ -57,9 +58,10 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     }
     
     func endSpinner(){
-        
+        print("end spinner fired")
         countNum += 1
-        position = rand
+        pick.selectRow(position, inComponent: 0, animated: true)
+        // position = rand
         finalResturant = selectedResturants2[rand]
         print("countNum is at: \(countNum)")
         // butOut2.isHidden = false
@@ -103,21 +105,15 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
             timeInterval = 0.4
             myT = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(ThirdViewController.movePicker), userInfo: nil, repeats: true)
         }
-        if amountInWheel == 2 {
+        
             if position >= 190 && spot == rand {
                 myT.invalidate()
+                position += 1
                 isSelected = true
                 endSpinner()
-                return
+                return 
             }
-        } else {
-            if position >= 190 && spot - 1 == rand {
-                isSelected = true
-                endSpinner()
-                myT.invalidate()
-                return
-            }
-        }
+    
         
         
         
@@ -138,6 +134,7 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         
         
         pick.selectRow(position, inComponent: 0, animated: true)
+         
 
     }
 
@@ -164,16 +161,6 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         let randomInt = Int.random(in: 0..<randdoNum)
         finalResturant  = selectedResturants2[randomInt]
     }
-    
-    
-    @IBAction func contBut(_ sender: UIButton) {
-        if isSelected == false {
-            let alert  = UIAlertController(title: "Error", message: "Do not press continue while the wheel is spinning", preferredStyle: .alert)
-            let buttonOK = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
-            alert.addAction(buttonOK)
-            present(alert, animated: true, completion: nil)
-    }
-}
     
     
     
