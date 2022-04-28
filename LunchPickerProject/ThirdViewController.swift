@@ -14,7 +14,7 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     @IBOutlet weak var butOut2: UIButton!
     @IBOutlet weak var resturantNamy: UILabel!
     var myT = Timer()
-    var rand = Int.random(in: 1...PickRestauraunts.selectedItems)
+    var rand = Int.random(in: 0...PickRestauraunts.selectedItems)
     var countNum = 0
     var isSelected = false
     var position = 0
@@ -62,7 +62,7 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         position = rand
         finalResturant = selectedResturants2[rand]
         print("countNum is at: \(countNum)")
-        butOut2.isHidden = false 
+        // butOut2.isHidden = false
         if countNum == 1 {
             
         myT.invalidate()
@@ -105,6 +105,7 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         }
         if amountInWheel == 2 {
             if position >= 190 && spot == rand {
+                myT.invalidate()
                 isSelected = true
                 endSpinner()
                 return
@@ -113,6 +114,7 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
             if position >= 190 && spot - 1 == rand {
                 isSelected = true
                 endSpinner()
+                myT.invalidate()
                 return
             }
         }
