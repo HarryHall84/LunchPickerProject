@@ -9,6 +9,7 @@ import UIKit
 import SwiftUI
 
 class FourthViewController: UIViewController {
+    @IBOutlet weak var labelOutlet: UILabel!
     @IBOutlet weak var adressOut: UILabel!
     @IBOutlet weak var phoneNumberOut: UILabel!
     @IBOutlet weak var distanceOut: UILabel!
