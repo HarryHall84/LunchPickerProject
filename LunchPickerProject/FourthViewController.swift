@@ -23,6 +23,72 @@ class FourthViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if(finalSelectedResturant.restName == "Taco Bell"){
+            labelOutlet.text = "I love the baja blast here"
+        }
+        else if(finalSelectedResturant.restName == "Mcdonalds"){
+            labelOutlet.text = "Where is the mcrib"
+        }
+        else if(finalSelectedResturant.restName == "Burger King"){
+            labelOutlet.text = "will you be my burger king"
+        }
+        else if(finalSelectedResturant.restName == "Culvers"){
+            labelOutlet.text = "RIP buffulo chicken tenders"
+        }
+        else if(finalSelectedResturant.restName == "Popey's"){
+            labelOutlet.text = "mmmmmm chicken sandwich"
+        }
+        else if(finalSelectedResturant.restName == "chick-fill-a"){
+            labelOutlet.text = "#1 with the lemonade"
+        }
+        else if(finalSelectedResturant.restName == "Subway"){
+            labelOutlet.text = "Eat Fresh!"
+        }
+        else if(finalSelectedResturant.restName == "Jimmy Johns"){
+            labelOutlet.text = "I love jimmy"
+        }
+        else if(finalSelectedResturant.restName == "Tommy's"){
+            labelOutlet.text = "Great hot dogs"
+        }
+        else if(finalSelectedResturant.restName == "Five Guys"){
+            labelOutlet.text = "Five Guys made this burger?"
+        }
+        else if(finalSelectedResturant.restName == "Panda Express"){
+            labelOutlet.text = "mmmm Orange chicken"
+        }
+        else if(finalSelectedResturant.restName == "Panera Bread"){
+            labelOutlet.text = "Panera Panera Panera"
+        }
+        else if(finalSelectedResturant.restName == "Mcalister's"){
+            labelOutlet.text = "I love alister"
+        }
+        else if(finalSelectedResturant.restName == "KFC"){
+            labelOutlet.text = "Biggest chicken ever"
+        }
+        else if(finalSelectedResturant.restName == "Wendy's"){
+            labelOutlet.text = "The 4 for 4"
+        }
+        else if(finalSelectedResturant.restName == "Noodle and Company"){
+            labelOutlet.text = "nooooooooodles"
+        }
+        else if(finalSelectedResturant.restName == "Honey Baked Ham"){
+            labelOutlet.text = "Honey + Baked Ham"
+        }
+        else if(finalSelectedResturant.restName == "Chipotle"){
+            labelOutlet.text = "big burrrito"
+        }
+        else if(finalSelectedResturant.restName == "Breaking Bread"){
+            labelOutlet.text = "bbbbbbbbread"
+        }
+        else if(finalSelectedResturant.restName == "Freddy's"){
+            labelOutlet.text = "good chilly cheese fries"
+        }
+        else if(finalSelectedResturant.restName == "Potbelly Sandwich Shop"){
+            labelOutlet.text = "potbeeellllly"
+        }
+        else if(finalSelectedResturant.restName == "Portillo's Hot Dog"){
+            labelOutlet.text = "hot hot dogs"
+        }
         doneBut.layer.cornerRadius = 25
         self.navigationItem.leftBarButtonItem = nil
         self.navigationItem.hidesBackButton = true
