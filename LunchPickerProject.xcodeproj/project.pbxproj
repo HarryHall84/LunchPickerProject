@@ -463,7 +463,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = JT5C6XJPAQ;
+				DEVELOPMENT_TEAM = JQ7BN4VH8D;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LunchPickerProject/Info.plist;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Allow app to use your location?";
@@ -493,7 +493,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = JT5C6XJPAQ;
+				DEVELOPMENT_TEAM = JQ7BN4VH8D;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LunchPickerProject/Info.plist;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Allow app to use your location?";
